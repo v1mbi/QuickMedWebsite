@@ -361,6 +361,14 @@ const MultiStepForm = ({
                         <span className="text-[11px] text-slate-500 font-medium italic leading-relaxed">
                           I confirm that all provided information is accurate
                           and I agree to the health data processing terms.
+                          <a
+                            href="/privacy"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:underline"
+                          >
+                            (View Privacy Policy)
+                          </a>
                         </span>
                       </label>
 

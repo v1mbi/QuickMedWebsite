@@ -451,6 +451,14 @@ const AssetQuoteForm = () => {
                         <span className="text-[11px] text-slate-500 font-medium italic">
                           I authorize this request to be processed under the
                           current Data Protection terms.
+                          <a
+                            href="/privacy"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:underline"
+                          >
+                            (View Privacy Policy)
+                          </a>
                         </span>
                       </label>
                     </div>
