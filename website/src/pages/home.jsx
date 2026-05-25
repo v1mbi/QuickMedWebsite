@@ -705,9 +705,11 @@ export default function Home() {
             hidden: { opacity: 1, y: 20 },
             visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
           }}
-          className="col-span-2 w-11/12 bg-rose-600 text-white font-bold  py-5 sm: px-10 rounded-2xl shadow-md hover:bg-rose-700 transition-colors flex items-center  gap-2 text-md sm:text-xl md:text-3xl  text-center"
+          className="col-span-2 w-11/12 sm:w-fit sm:mx-auto bg-rose-600 text-white font-bold  py-5 sm: px-10 rounded-2xl shadow-md hover:bg-rose-700 transition-colors flex items-center  gap-2 text-md sm:text-xl md:text-3xl  text-center"
         >
-          <span className="w-full text-center">Explore More Articles</span>
+          <span className="w-full sm:w-fit text-center">
+            Explore More Articles
+          </span>
           <ArrowRight className="w-4 h-4" />
         </MotionLink>
       </motion.section>
@@ -720,10 +722,10 @@ export default function Home() {
             <h1>Us</h1>
           </div>
           <div className="flex flex-col items-start justify-start space-y-10 md:space-y-2 h-full p-3">
-            <h1 className="text-4xl font-jakarta md:text-3xl lg:text-4xl mx-auto md:mx-0 flex flex-col text-black font-bold">
+            <h1 className="text-lg sm:text-4xl font-jakarta md:text-3xl lg:text-4xl mx-auto md:mx-0 flex flex-col text-black font-bold">
               QuickMedConnections
             </h1>
-            <h1 className="text-xs font-montserrat  mt-2 text-slate-700 max-w-lg leading-relaxed text-start">
+            <h1 className="text-[0.525rem] sm:text-xs font-montserrat  mt-2 text-slate-700 w-full leading-relaxed text-start">
               QuickMed Connections is a UK-based representative underwritten by
               Generation Health Medical Aid Fund that empowers the Zimbabwean
               diaspora to easily secure, manage, and fund comprehensive medical
