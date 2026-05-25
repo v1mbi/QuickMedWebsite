@@ -201,7 +201,7 @@ export default function Home() {
                   initial={{ y: -20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
-                  className="text-2xl font-jakarta md:text-5xl lg:text-6xl font-black tracking-tight text-center text-blue-900 bg-gradient-to-r from-rose-900 via-rose-600 to-rose-900 bg-clip-text text-transparent mb-10  sm:px-4"
+                  className="text-xl sm:text-4xl font-jakarta md:text-5xl lg:text-6xl font-black tracking-tight text-center text-blue-900 bg-gradient-to-r from-rose-900 via-rose-600 to-rose-900 bg-clip-text text-transparent mb-10  sm:px-4"
                 >
                   Your Next Diaspora Insurance
                 </motion.h1>
@@ -222,10 +222,10 @@ export default function Home() {
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.15),transparent_50%)]" />
 
                     <div className="relative z-10">
-                      <div className="text-rose-100 w-fit font-bold uppercase tracking-widest text-[0.525rem] md:text-xs bg-white/10 px-3 py-1 rounded-full backdrop-blur-sm">
+                      <div className="text-rose-100 w-fit font-bold uppercase tracking-widest text-[0.325rem] sm:text-[0.525rem] md:text-xs bg-white/10 px-3 py-1 rounded-full backdrop-blur-sm">
                         Global Protection
                       </div>
-                      <h2 className="text-3xl sm:text-4xl font-black tracking-tight mt-6 leading-tight">
+                      <h2 className="text-xl sm:text-4xl font-black tracking-tight mt-6 leading-tight">
                         Insure Your <br />
                         Future
                       </h2>
@@ -233,7 +233,7 @@ export default function Home() {
 
                     <motion.button
                       whileTap={{ scale: 0.97 }}
-                      className="w-full mt-8 bg-white text-rose-600 font-bold text-base py-4 px-6 rounded-2xl shadow-md shadow-rose-900/20 hover:bg-rose-50 transition-colors flex items-center justify-center gap-2 relative z-10 group"
+                      className="text-[0.525rem] sm:text-md w-full mt-3 sm:mt-8 bg-white text-rose-600 font-bold text-base py-2 sm:py-4 px-3 sm:px-6 rounded-2xl shadow-md shadow-rose-900/20 hover:bg-rose-50 transition-colors flex items-center justify-center gap-1 sm:gap-2 relative z-10 group"
                     >
                       <span>Today</span>
                       <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
