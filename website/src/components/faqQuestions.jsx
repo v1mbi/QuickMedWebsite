@@ -128,7 +128,7 @@ const FAQCard = ({ faq, isOpen, isHovered, onHoverStart, onHoverEnd }) => {
         ${faq.size === "lg" ? "md:col-span-2 md:row-span-2 md:h-full" : ""}
         ${faq.size === "md" ? "md:col-span-2" : ""}
         
-         min-h-[400px] sm:min-h-[160px] md:min-h-[240px] flex flex-col justify-between
+         min-h-[100px] sm:min-h-[160px] md:min-h-[240px] flex flex-col justify-between
       `}
     >
       <div className="flex flex-col gap-4">
@@ -187,7 +187,7 @@ const FaqSection = () => {
   }, []);
 
   return (
-    <section className="h-[1600px] md:h-[2500px] lg:h-[1800px] xl:h-[1700px] border px-4 md:px-12 py-20 md:py-32 bg-slate-50/20">
+    <section className="h-[1800px] sm:h-[1600px] md:h-[2500px] lg:h-[1800px] xl:h-[1700px] border px-4 md:px-12 py-20 md:py-32 bg-slate-50/20">
       <div className="mx-auto max-w-7xl">
         {/* Animated Header (Slower) */}
         <motion.header
