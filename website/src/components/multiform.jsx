@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus, Check, ShieldCheck, ChevronDown } from "lucide-react";
-import {Textifier} from "../functions/textifier"
-import {sendEmailNotification} from "../components/email"
+import { Textifier } from "../functions/textifier";
+import { sendEmailNotification } from "../components/email";
 import Swal from "sweetalert2";
 
-const MultiStepForm = ({ limits = [10, 20, 30, 40] ,title="Health Insurance"}) => {
+const MultiStepForm = ({
+  limits = [10, 20, 30, 40],
+  title = "Health Insurance",
+}) => {
   const COUNTRY_CODES = [
     { code: "+263", country: "ZW", name: "Zimbabwe" },
     { code: "+27", country: "ZA", name: "South Africa" },
@@ -84,36 +87,38 @@ const MultiStepForm = ({ limits = [10, 20, 30, 40] ,title="Health Insurance"}) =
       ...formData,
       fullPhone: `${selectedDialCode}${formData.cellphone}`,
     };
-    console.log("Submission JSON:",  Textifier(finalData));
+    console.log("Submission JSON:", Textifier(finalData));
 
     Swal.fire({
-        title: 'Sending...',
-        didOpen: () => { Swal.showLoading() },
-        allowOutsideClick: false
-      });
-    
-      try {
-        await sendEmailNotification("Funeral Insurance Application Submission","Funeral Insurance",Textifier(finalData));
-      } catch (error) {
-        console.error(error);
-      }
-    
-        // Trigger the success UI state
-        setIsSubmitted(true);
-    
-        // Reset success message after 4 seconds
-        setTimeout(() => setIsSubmitted(false), 4000);
-    
+      title: "Sending...",
+      didOpen: () => {
+        Swal.showLoading();
+      },
+      allowOutsideClick: false,
+    });
+
+    try {
+      await sendEmailNotification(
+        "Funeral Insurance Application Submission",
+        "Funeral Insurance",
+        Textifier(finalData),
+      );
+    } catch (error) {
+      console.error(error);
+    }
+
+    // Reset success message back to input screen after 4 seconds if desired
+    setTimeout(() => setSubmitted(false), 4000);
   };
 
   const isSubmitDisabled =
     formData.country === "South Africa" || !formData.privacy;
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center  bg-gradient-to-tr ">
+    <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-tr">
       <motion.div
         layout
-        className="relative w-full  bg-white/70 backdrop-blur-3xl border border-white/50 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] rounded-[3rem] overflow-hidden"
+        className="relative w-full bg-white/70 backdrop-blur-3xl border border-white/50 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] rounded-[3rem] overflow-hidden"
       >
         {/* Progress Bar */}
         <div className="absolute top-0 left-0 w-full h-1.5 bg-blue-50/50">
@@ -174,7 +179,6 @@ const MultiStepForm = ({ limits = [10, 20, 30, 40] ,title="Health Insurance"}) =
                         onChange={(e) =>
                           handleInputChange("firstName", e.target.value)
                         }
-                        className="text-[16px] sm:text-sm"
                       />
                       <FloatingInput
                         label="Surname"
@@ -183,7 +187,6 @@ const MultiStepForm = ({ limits = [10, 20, 30, 40] ,title="Health Insurance"}) =
                         onChange={(e) =>
                           handleInputChange("surname", e.target.value)
                         }
-                        className="text-[16px] sm:text-sm"
                       />
                     </div>
 
@@ -195,7 +198,6 @@ const MultiStepForm = ({ limits = [10, 20, 30, 40] ,title="Health Insurance"}) =
                       onChange={(e) =>
                         handleInputChange("email", e.target.value)
                       }
-                      className="text-[16px] sm:text-sm"
                     />
 
                     {/* Allowance Row */}
@@ -206,22 +208,22 @@ const MultiStepForm = ({ limits = [10, 20, 30, 40] ,title="Health Insurance"}) =
                       onChange={(e) =>
                         handleInputChange("allowance", e.target.value)
                       }
-                      className="text-[16px] sm:text-sm"
                     />
 
-                    {/* Cellphone Row - Expanded Layout */}
+                    {/* Cellphone Row */}
                     <div className="space-y-1.5">
                       <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">
                         Cellphone Number
                       </label>
                       <div className="flex flex-col sm:flex-row h-fit gap-3">
-                        <div className="relative w-32 shrink-0">
+                        <div className="relative w-full sm:w-32 shrink-0">
                           <select
                             value={selectedDialCode}
                             onChange={(e) =>
                               setSelectedDialCode(e.target.value)
                             }
-                            className="w-full h-[58px] px-4 bg-white/50 border border-slate-100 rounded-2xl focus:ring-4 focus:ring-blue-100 appearance-none text-xs text-blue-600 font-bold cursor-pointer transition-all"
+                            // Changed text-xs to text-base md:text-xs to fix zoom
+                            className="w-full h-[58px] px-4 bg-white/50 border border-slate-100 rounded-2xl focus:ring-4 focus:ring-blue-100 appearance-none text-base md:text-xs text-blue-600 font-bold cursor-pointer transition-all"
                           >
                             {COUNTRY_CODES.map((item) => (
                               <option key={item.country} value={item.code}>
@@ -241,7 +243,8 @@ const MultiStepForm = ({ limits = [10, 20, 30, 40] ,title="Health Insurance"}) =
                           onChange={(e) =>
                             handleInputChange("cellphone", e.target.value)
                           }
-                          className="sm:flex-1 h-[58px] px-6 bg-white/50 border border-slate-100 rounded-2xl focus:ring-4 focus:ring-blue-100 focus:outline-none text-[16px] sm:text-sm text-slate-700 font-bold placeholder:text-slate-300 transition-all"
+                          // Changed text-sm to text-base md:text-sm to fix zoom
+                          className="w-full sm:flex-1 h-[58px] px-6 bg-white/50 border border-slate-100 rounded-2xl focus:ring-4 focus:ring-blue-100 focus:outline-none text-base md:text-sm text-slate-700 font-bold placeholder:text-slate-300 transition-all"
                         />
                       </div>
                     </div>
@@ -249,7 +252,7 @@ const MultiStepForm = ({ limits = [10, 20, 30, 40] ,title="Health Insurance"}) =
                     <div className="pt-6">
                       <button
                         onClick={() => setStep(2)}
-                        className="w-full py-5 bg-blue-600 text-white rounded-[2rem] font-black text-[10px]  sm:text-sm uppercase tracking-widest shadow-xl shadow-blue-100 hover:bg-blue-700 hover:scale-[1.01] active:scale-[0.99] transition-all"
+                        className="w-full py-5 bg-blue-600 text-white rounded-[2rem] font-black text-[10px] sm:text-sm uppercase tracking-widest shadow-xl shadow-blue-100 hover:bg-blue-700 hover:scale-[1.01] active:scale-[0.99] transition-all"
                       >
                         Continue Application
                       </button>
@@ -265,7 +268,6 @@ const MultiStepForm = ({ limits = [10, 20, 30, 40] ,title="Health Insurance"}) =
                         onChange={(e) =>
                           handleInputChange("gpName", e.target.value)
                         }
-                        className="text-[17px] sm:text-sm"
                       />
                       <FloatingSelect
                         label="Source of Funds"
@@ -404,6 +406,7 @@ const MultiStepForm = ({ limits = [10, 20, 30, 40] ,title="Health Insurance"}) =
   );
 };
 
+// Global Sub-components refactored to prioritize layout standard 16px font sizes on iOS viewports
 function FloatingInput({ label, ...props }) {
   return (
     <div className="space-y-1.5 flex-1">
@@ -412,7 +415,9 @@ function FloatingInput({ label, ...props }) {
       </label>
       <input
         {...props}
-        className="w-full h-[58px] px-6 bg-white/50 border border-slate-100 rounded-2xl focus:ring-4 focus:ring-blue-100 focus:outline-none transition-all text-sm text-slate-700 font-bold placeholder:text-slate-200" />
+        // Removed text-sm and swapped with responsive zoom-safe text base configurations
+        className="w-full h-[58px] px-6 bg-white/50 border border-slate-100 rounded-2xl focus:ring-4 focus:ring-blue-100 focus:outline-none transition-all text-base md:text-sm text-slate-700 font-bold placeholder:text-slate-200"
+      />
     </div>
   );
 }
@@ -425,7 +430,8 @@ const FloatingSelect = ({ label, options, ...props }) => (
     <div className="relative">
       <select
         {...props}
-        className="w-full h-[58px] px-6 bg-white/50 border border-slate-100 rounded-2xl focus:ring-4 focus:ring-blue-100 appearance-none cursor-pointer text-sm text-slate-700 font-bold transition-all"
+        // Removed text-sm and swapped with responsive zoom-safe text base configurations
+        className="w-full h-[58px] px-6 bg-white/50 border border-slate-100 rounded-2xl focus:ring-4 focus:ring-blue-100 appearance-none cursor-pointer text-base md:text-sm text-slate-700 font-bold transition-all"
       >
         <option value="" disabled>
           Choose option...
