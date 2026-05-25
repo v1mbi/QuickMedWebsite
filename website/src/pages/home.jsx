@@ -715,8 +715,8 @@ export default function Home() {
       </motion.section>
 
       {/* 6. ANNOUNCEMENTS */}
-      <div className="bg-gradient-to-r from-indigo-50 to-indigo-50 text-white py-4 px-6 text-center text-sm font-medium">
-        <div className="flex flex-col md:flex-row justify-center items-center gap-1">
+      <div className=" bg-gradient-to-r flex items-center justify-center from-indigo-50 to-indigo-50 text-white py-4 px-6 text-center text-sm font-medium">
+        <div className="flex max-w-[1200px]  flex-col md:flex-row justify-center items-center gap-1">
           <div className="font-jakarta md:text-8xl lg:text-9xl flex md:flex-col space-x-1 bg-blue-300 md:bg-transparent px-7 rounded-xl text-blue-700 justify-start items-end">
             <h1>About</h1>
             <h1>Us</h1>
@@ -725,7 +725,7 @@ export default function Home() {
             <h1 className="text-lg sm:text-4xl font-jakarta md:text-3xl lg:text-4xl mx-auto md:mx-0 flex flex-col text-black font-bold">
               QuickMedConnections
             </h1>
-            <h1 className="text-[0.625rem] text-center  sm:text-xs font-montserrat  mt-2 text-slate-700 w-full leading-relaxed sm:text-start">
+            <h1 className="text-[0.625rem] text-center  sm:text-xs font-montserrat font-semibold text-black/50 mt-2 text-slate-700 w-full leading-relaxed sm:text-start">
               QuickMed Connections is a UK-based representative underwritten by
               Generation Health Medical Aid Fund that empowers the Zimbabwean
               diaspora to easily secure, manage, and fund comprehensive medical
