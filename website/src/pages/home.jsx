@@ -250,10 +250,10 @@ export default function Home() {
                       }}
                       className="bg-white border border-red-300 rounded-2xl p-4 sm:p-5 flex items-center gap-4 shadow-red-300 shadow-md"
                     >
-                      <div className="bg-rose-100 border border-rose-200 text-rose-600 font-extrabold text-lg sm:text-xl px-4 py-2 rounded-xl flex-shrink-0 min-w-[70px] text-center shadow-inner">
+                      <div className="bg-rose-100 border border-rose-200 text-rose-600 font-extrabold text-[0.625rem] sm:text-xl px-4 py-2 rounded-xl flex-shrink-0 min-w-[70px] text-center shadow-inner">
                         80+
                       </div>
-                      <div className="font-bold text-[0.325rem] sm:text-2xl text-red-600 tracking-tight">
+                      <div className="font-bold text-[0.625rem] sm:text-2xl text-red-600 tracking-tight">
                         Affordable Plans
                       </div>
                     </motion.div>
