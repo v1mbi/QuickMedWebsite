@@ -35,10 +35,10 @@ const BlogCard = ({ title, message, imageSrc, author, date }) => {
               <span className="text-[8px] sm:text-[10px] font-bold tracking-widest text-rose-500 uppercase">
                 Article
               </span>
-              <h2 className="text-[10px] sm:text-2xl font-bold font-jakarta text-slate-900 mt-1 mb-3 group-hover:text-rose-600 transition-colors">
+              <h2 className="text-[20px] sm:text-2xl font-bold font-jakarta text-slate-900 mt-1 mb-3 group-hover:text-rose-600 transition-colors">
                 {title}
               </h2>
-              <p className="text-slate-600 text-[0.525rem] sm:text-sm line-clamp-5 sm:line-clamp-4 font-jakarta leading-relaxed">
+              <p className="text-slate-600 text-[0.525rem] sm:text-sm line-clamp-10 sm:line-clamp-4 font-jakarta leading-relaxed">
                 {message}
               </p>
             </div>
