@@ -674,7 +674,7 @@ export default function Home() {
                 transition: { duration: 0.6, ease: "easeOut" },
               },
             }}
-            className="h-[275px] w-11/12 mb-20 flex justify-center items-center mx-auto"
+            className="h-fit sm:h-[275px] w-11/12 mb-20 flex justify-center items-center mx-auto"
           >
             {blog.blogImage ===
             "https://via.placeholder.com/600x400?text=No+Image+Available" ? (
