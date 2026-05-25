@@ -58,7 +58,7 @@ const ProviderResources = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1.4, ease: "easeOut" }} // Relaxed slide-down duration
-              className="text-[10px] sm:text-xl font-montserrat md:text-2xl font-bold text-blue-600 tracking-tight"
+              className="text-[12px] sm:text-xl font-montserrat md:text-2xl font-bold text-blue-600 tracking-tight"
             >
               Service Provider List
             </motion.h2>
@@ -96,7 +96,7 @@ const ProviderResources = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1.4, delay: 0.2, ease: "easeOut" }} // Relaxed slide-down duration + slight offset delay
-              className="text-xl font-montserrat md:text-2xl font-bold text-red-600 tracking-tight"
+              className="text-[12px] sm:text-xl font-montserrat md:text-2xl font-bold text-red-600 tracking-tight"
             >
               Waiting Period
             </motion.h2>
