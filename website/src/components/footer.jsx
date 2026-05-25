@@ -24,7 +24,7 @@ const Footer = () => {
       {/* Upper Footer: Branding & Links */}
       <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
         {/* Branding Column */}
-        <div className="md:col-span-1">
+        <div className="p-1 md:col-span-1">
           <h2 className="text-3xl font-serif font-bold text-slate-900 leading-tight mb-4 italic">
             Plan for the Best.
             <br />
@@ -41,7 +41,7 @@ const Footer = () => {
         </div>
 
         {/* Navigation Links */}
-        <div>
+        <div className="p-1">
           <h3 className="text-xs font-bold text-slate-900 uppercase tracking-widest mb-6">
             Quick Links
           </h3>
@@ -68,7 +68,7 @@ const Footer = () => {
         </div>
 
         {/* Insurance Links */}
-        <div>
+        <div className="p-1">
           <h3 className="text-xs font-bold text-slate-900 uppercase tracking-widest mb-6">
             Insurance
           </h3>
@@ -114,7 +114,7 @@ const Footer = () => {
 
       {/* Middle Bar: Contact Details Grid */}
       <div className="bg-slate-900 text-white/70 py-10 px-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-xs font-medium uppercase tracking-wider">
+        <div className="p-1 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-xs font-medium uppercase tracking-wider">
           {/* Phones */}
           <div className="flex flex-col gap-3">
             <span className="text-white/40 mb-1">Inquiries</span>
