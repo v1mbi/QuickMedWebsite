@@ -626,7 +626,7 @@ export default function Home() {
       </section>
 
       <motion.section
-        className="lg:grid space-y-2 flex items-center justify-center lg:grid-cols-2 h-fit py-32"
+        className="lg:grid space-y-2 flex flex-col items-center justify-center lg:grid-cols-2 h-fit py-32"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
