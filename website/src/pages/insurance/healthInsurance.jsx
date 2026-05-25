@@ -27,6 +27,7 @@ export default function HealthInsurance() {
         console.error("Error fetching limits:", error);
       }};
       fetchLimits();
+        document.title = "Health Insurance - QuickMed Connections";
     }, []);
   return (
     <div className="w-full min-h-screen flex flex-col items-center justify-center ">

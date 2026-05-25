@@ -32,6 +32,11 @@ const FAQ = () => {
       border: "border-amber-100",
     },
   ];
+
+  useEffect(() => {
+    document.title = "FAQ - QuickMed Connections";
+  }, []);
+
   return (
     <div className="w-full flex flex-col space-y-16 text-center">
       <div className="w-full max-w-6xl mx-auto px-6 py-16 bg-white rounded-[3rem] border border-slate-100 shadow-2xl shadow-slate-200/40 my-10">

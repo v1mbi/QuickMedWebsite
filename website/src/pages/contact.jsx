@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Swal from "sweetalert2";
 import {
@@ -16,6 +16,11 @@ import Footer from "../components/footer";
 import { sendEmailNotification } from "../components/email";
 
 const ContactPage = () => {
+
+  useEffect(() => {
+    document.title = "Contact Us - QuickMed Connections";
+  }, []);
+
   const [formData, setFormData] = useState({
     fullName: "",
     policyType: "Health Insurance",

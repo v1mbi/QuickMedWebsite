@@ -26,6 +26,7 @@ export default function Blog() {
     getSanityData('blog').then(setBlogs);
     getSanityData('announcement').then(setAnnouncements);
     getSanityData('mediaLink').then(setLink);
+    document.title = "Blog - QuickMed Connections";
   }, []);
 
   return (

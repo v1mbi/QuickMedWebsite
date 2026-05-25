@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useeEffect} from "react";
 import AssetQuoteForm from "../../components/assetForm";
 import AllInsuranceAdvantages from "../../components/whyAsset";
 import { Contact } from "../../components/contact";
@@ -8,6 +8,9 @@ import Footer from "../../components/footer";
 import image from "../../assets/assetWallPaper.jpeg";
 
 const AssetInsurance = () => {
+    useEffect(() => {
+       document.title = "Asset Insurance - QuickMed Connections";
+      }, []);
   return (
     <div className=" w-full ">
       <div className="relative w-full h-[75vh] flex items-center justify-center font-sans overflow-hidden">

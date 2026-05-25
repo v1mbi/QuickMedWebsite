@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {
   Shield,
   FileText,
@@ -12,6 +12,9 @@ import {
 } from "lucide-react";
 
 const PrivacyPolicy = () => {
+    useEffect(() => {
+        document.title = "Privacy Policy - QuickMed Connections";
+      }, []);
   return (
     <div className="w-full bg-slate-50/50 min-h-screen py-16 px-4 sm:px-6 lg:px-8 font-sans antialiased text-slate-600">
       <div className="max-w-3xl mx-auto bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden">

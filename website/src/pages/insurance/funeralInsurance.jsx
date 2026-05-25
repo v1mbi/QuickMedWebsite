@@ -53,6 +53,7 @@ useEffect(() => {
         console.error("Error fetching limits:", error);
       }};
       fetchLimits();
+      document.title = "Funeral Insurance - QuickMed Connections";
     }, []);
 
   return (

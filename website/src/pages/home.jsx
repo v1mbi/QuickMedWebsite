@@ -97,6 +97,7 @@ export default function Home() {
       setCurrentPhase(2);
     }, 4500); // Adjust this value to control how long Phase 1 stays on screen
     return () => clearTimeout(timer);
+    document.title = "Home | QuickMed Connections";
   }, []);
 
   // Slide paths for Phase transitions
