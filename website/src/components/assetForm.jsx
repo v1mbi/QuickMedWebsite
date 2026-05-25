@@ -188,7 +188,7 @@ const AssetQuoteForm = () => {
               <h1 className="text-xl sm:text-3xl font-jakarta font-black text-slate-800 tracking-tight leading-tight">
                 {currentType.label} Quote
               </h1>
-              <p className="text-blue-500 font-bold text-[0.95rem] sm:text-[10px] uppercase tracking-[0.2em] mt-1">
+              <p className="text-blue-500 font-bold text-[0.45rem] sm:text-[10px] uppercase tracking-[0.2em] mt-1">
                 Asset Portal • {currentType.subtitle}
               </p>
             </div>
@@ -253,7 +253,7 @@ const AssetQuoteForm = () => {
                         onChange={(e) =>
                           handleInputChange("name", e.target.value)
                         }
-                        className="text-[18px] sm:text-sm"
+                        className="text-[20px] sm:text-sm"
                       />
                       <FloatingInput
                         label="Email Address"
@@ -263,7 +263,7 @@ const AssetQuoteForm = () => {
                         onChange={(e) =>
                           handleInputChange("email", e.target.value)
                         }
-                        className="text-[18px] sm:text-sm"
+                        className="text-[20px] sm:text-sm"
                       />
                     </div>
 
@@ -275,7 +275,7 @@ const AssetQuoteForm = () => {
                         onChange={(e) =>
                           handleInputChange("sourceOfFunds", e.target.value)
                         }
-                        className="text-[17px] sm:text-sm"
+                        className="text-[20px] sm:text-sm"
                       />
                       <FloatingSelect
                         label="Payout Limit (USD)"
@@ -294,7 +294,7 @@ const AssetQuoteForm = () => {
                         onChange={(e) =>
                           handleInputChange("allowance", e.target.value)
                         }
-                        className="text-[18px] sm:text-sm"
+                        className="text-[20px] sm:text-sm"
                       />
                     </div>
 
@@ -307,7 +307,7 @@ const AssetQuoteForm = () => {
                         onChange={(e) =>
                           handleInputChange("valueOfAssets", e.target.value)
                         }
-                        className="text-[18px] sm:text-sm"
+                        className="text-[20px] sm:text-sm"
                       />
                       <div className="space-y-1.5">
                         <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">
@@ -334,7 +334,7 @@ const AssetQuoteForm = () => {
                             onChange={(e) =>
                               handleInputChange("cellphone", e.target.value)
                             }
-                            className="flex-1 h-[58px] px-4 bg-white/50 border border-slate-100 rounded-2xl text-[18px] sm:text-sm font-bold focus:ring-4 focus:ring-blue-100 focus:outline-none transition-all duration-500"
+                            className="flex-1 h-[58px] px-4 bg-white/50 border border-slate-100 rounded-2xl text-[20px] sm:text-sm font-bold focus:ring-4 focus:ring-blue-100 focus:outline-none transition-all duration-500"
                           />
                         </div>
                       </div>
@@ -359,7 +359,7 @@ const AssetQuoteForm = () => {
                             onChange={(e) =>
                               handleInputChange("regNumber", e.target.value)
                             }
-                            className="text-[18px] sm:text-sm"
+                            className="text-[20px] sm:text-sm"
                           />
                           <FloatingInput
                             label="Market Value"
@@ -368,7 +368,7 @@ const AssetQuoteForm = () => {
                             onChange={(e) =>
                               handleInputChange("vehicleValue", e.target.value)
                             }
-                            className="text-[18px] sm:text-sm"
+                            className="text-[20px] sm:text-sm"
                           />
                         </>
                       )}
@@ -382,7 +382,7 @@ const AssetQuoteForm = () => {
                             onChange={(e) =>
                               handleInputChange("deviceModel", e.target.value)
                             }
-                            className="text-[18px] sm:text-sm"
+                            className="text-[20px] sm:text-sm"
                           />
                           <FloatingInput
                             label="Serial / IMEI"
@@ -391,7 +391,7 @@ const AssetQuoteForm = () => {
                             onChange={(e) =>
                               handleInputChange("serialNumber", e.target.value)
                             }
-                            className="text-[18px] sm:text-sm"
+                            className="text-[20px] sm:text-sm"
                           />
                         </>
                       )}
@@ -404,7 +404,7 @@ const AssetQuoteForm = () => {
                           onChange={(e) =>
                             handleInputChange("address", e.target.value)
                           }
-                          className="text-[18px] sm:text-sm"
+                          className="text-[20px] sm:text-sm"
                         />
                       )}
                       {insuranceType === "crop" && (
@@ -415,7 +415,7 @@ const AssetQuoteForm = () => {
                           onChange={(e) =>
                             handleInputChange("cropType", e.target.value)
                           }
-                          className="text-[18px] sm:text-sm"
+                          className="text-[20px] sm:text-sm"
                         />
                       )}
                       {insuranceType === "livestock" && (
@@ -434,7 +434,7 @@ const AssetQuoteForm = () => {
                               Math.max(1, formData.livestockCount - 1),
                             )
                           }
-                          className="text-[18px] sm:text-sm"
+                          className="text-[20px] sm:text-sm"
                         />
                       )}
                     </div>
@@ -451,7 +451,7 @@ const AssetQuoteForm = () => {
                             onChange={(e) =>
                               handleInputChange("privacy", e.target.checked)
                             }
-                            className="text-[18px] sm:text-sm"
+                            className="text-[20px] sm:text-sm"
                           />
                           <AnimatePresence>
                             {formData.privacy && (
