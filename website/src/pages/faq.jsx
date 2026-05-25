@@ -54,7 +54,7 @@ const FAQ = () => {
         </div>
 
         {/* Categories Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-6">
           {categories.map((cat, i) => (
             <motion.div
               key={cat.name}
