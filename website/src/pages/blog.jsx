@@ -95,7 +95,7 @@ export default function Blog() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="h-[275px]"
+                className="h-fit sm:h-[275px]"
               >
                 {blog.blogImage ===
                 "https://via.placeholder.com/600x400?text=No+Image+Available" ? (
