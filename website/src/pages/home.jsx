@@ -224,7 +224,7 @@ export default function Home() {
                       <div className="text-rose-100 w-fit font-bold uppercase tracking-widest text-[0.325rem] sm:text-[0.525rem] md:text-xs bg-white/10 px-3 py-1 rounded-full backdrop-blur-sm">
                         Global Protection
                       </div>
-                      <h2 className="text-xl sm:text-4xl font-black tracking-tight mt-6 leading-tight">
+                      <h2 className="text-xl sm:text-4xl font-black tracking-tight mt-2 sm:mt-6 leading-tight">
                         Insure Your <br />
                         Future
                       </h2>
