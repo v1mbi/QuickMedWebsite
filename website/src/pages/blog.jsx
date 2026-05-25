@@ -29,7 +29,7 @@ export default function Blog() {
   }, []);
 
   return (
-    <div className="flex font-montserrat w-full flex-col min-h-screen bg-white font-sans overflow-x-hidden">
+    <div className="flex font-montserrat w-full flex-col min-h-screen bg-white  overflow-x-hidden">
       <NotificationBlock announcements={announcements} />
 
       {/* --- HERO SECTION --- */}
@@ -88,34 +88,36 @@ export default function Blog() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <AnimatePresence>
-            {blogs.map((blog, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="h-fit sm:h-[275px]"
-              >
-                {blog.blogImage ===
-                "https://via.placeholder.com/600x400?text=No+Image+Available" ? (
-                  <TextBlogCard
-                    title={blog.title}
-                    message={blog.message}
-                    author={blog.author}
-                    date={formatDate(blog.date)}
-                  />
-                ) : (
-                  <BlogCard
-                    title={blog.title}
-                    message={blog.message}
-                    author={blog.author}
-                    date={formatDate(blog.date)}
-                    imageSrc={blog.blogImage}
-                  />
-                )}
-              </motion.div>
-            ))}
+            {[...blogs, ...blogs, ...blogs, ...blogs, ...blogs].map(
+              (blog, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="h-fit sm:h-[275px]"
+                >
+                  {blog.blogImage ===
+                  "https://via.placeholder.com/600x400?text=No+Image+Available" ? (
+                    <TextBlogCard
+                      title={blog.title}
+                      message={blog.message}
+                      author={blog.author}
+                      date={formatDate(blog.date)}
+                    />
+                  ) : (
+                    <BlogCard
+                      title={blog.title}
+                      message={blog.message}
+                      author={blog.author}
+                      date={formatDate(blog.date)}
+                      imageSrc={blog.blogImage}
+                    />
+                  )}
+                </motion.div>
+              ),
+            )}
           </AnimatePresence>
         </div>
 
