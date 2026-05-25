@@ -216,7 +216,7 @@ export default function Home() {
                   <motion.div
                     variants={itemVariants}
                     whileHover={{ y: -6, transition: { duration: 0.2 } }}
-                    className="col-span-2 bg-gradient-to-br from-red-500 to-rose-600 text-white rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-xl shadow-rose-500/10 min-h-[200px] sm:min-h-[300px] border border-rose-400/20 relative overflow-hidden group"
+                    className="col-span-2 bg-gradient-to-br from-red-500 to-rose-600 text-white rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-xl shadow-rose-500/10 min-h-[220px] sm:min-h-[300px] border border-rose-400/20 relative overflow-hidden group"
                   >
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.15),transparent_50%)]" />
 
