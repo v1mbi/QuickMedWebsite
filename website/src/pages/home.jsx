@@ -201,7 +201,7 @@ export default function Home() {
                   initial={{ y: -20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
-                  className="text-4xl font-jakarta md:text-5xl lg:text-6xl font-black tracking-tight text-center text-blue-900 bg-gradient-to-r from-rose-900 via-rose-600 to-rose-900 bg-clip-text text-transparent mb-10  px-4"
+                  className="text-2xl font-jakarta md:text-5xl lg:text-6xl font-black tracking-tight text-center text-blue-900 bg-gradient-to-r from-rose-900 via-rose-600 to-rose-900 bg-clip-text text-transparent mb-10  px-4"
                 >
                   Your Next Diaspora Insurance
                 </motion.h1>
