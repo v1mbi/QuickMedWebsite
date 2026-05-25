@@ -66,8 +66,8 @@ const ProviderResources = () => {
               whileHover={{ scale: 1.02, backgroundColor: "#dc2626" }}
               whileTap={{ scale: 0.98 }}
               className="ml-auto 
-              md:w-auto px-2 sm:px-10 py-1 sm:py-4 bg-red-500 text-white 
-              font-bold rounded-2xl flex items-center justify-center 
+              md:w-auto px-5 sm:px-10 py-2 sm:py-4 bg-red-500 text-white 
+              font-bold rounded-lg sm:rounded-2xl flex items-center justify-center 
               gap-2 shadow-lg shadow-red-200 transition-colors 
               uppercase tracking-wider"
             >
