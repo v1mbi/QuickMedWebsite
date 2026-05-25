@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import image from "../assets/funeralWallPaper.jpeg";
 
 const FuneralTitle = () => {
   return (
@@ -12,7 +13,7 @@ const FuneralTitle = () => {
         className="absolute inset-0 -z-10"
       >
         <img
-          src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=2000"
+          src={image}
           alt="Modern clinical background"
           className="w-full h-full object-cover"
         />
