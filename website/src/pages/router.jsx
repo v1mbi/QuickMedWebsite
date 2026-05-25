@@ -12,7 +12,7 @@ import Home from "./home";
 
 export default function Router() {
   return (
-    <div className="flex flex-col items-end w-screen space-y-20"><Navbar /><h1>demo</h1><Routes >
+    <div className="flex flex-col items-end w-screen space-y-20 overflow-y-hidden"><Navbar /><h1>demo</h1><Routes >
       <Route path="/" element={<Home/>} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/faq" element={<FAQ/>} />
