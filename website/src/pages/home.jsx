@@ -323,7 +323,7 @@ export default function Home() {
           <p className="text-center text-xs font-semibold uppercase tracking-widest text-slate-400 mb-6">
             Trusted by industry defining giants
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-12 font-bold text-xl tracking-tighter text-slate-400">
+          <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-12 font-bold text-md sm:text-xl tracking-tighter text-slate-400">
             {partners.map((partner, i) => (
               <span
                 key={i}
