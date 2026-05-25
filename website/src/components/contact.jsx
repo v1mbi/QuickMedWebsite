@@ -124,7 +124,7 @@ export const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-5 relative z-10">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div className="space-y-2">
-                  <label className="text-[16px] font-black uppercase tracking-widest text-slate-400 ml-2">
+                  <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-2">
                     Full Name
                   </label>
                   <input
@@ -134,11 +134,11 @@ export const Contact = () => {
                     onChange={handleChange}
                     placeholder="John Doe"
                     required
-                    className="w-full px-6 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all text-sm"
+                    className="w-full px-6 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all text-[16px] sm:text-sm"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-[16px] font-black uppercase tracking-widest text-slate-400 ml-2">
+                  <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-2">
                     Phone
                   </label>
                   <input
@@ -148,14 +148,14 @@ export const Contact = () => {
                     onChange={handleChange}
                     placeholder="+263..."
                     required
-                    className="w-full px-6 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all text-sm"
+                    className="w-full px-6 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all text-[16px] sm:text-sm"
                   />
                 </div>
               </div>
 
               {/* Added Email Section */}
               <div className="space-y-2">
-                <label className="text-[16px] font-black uppercase tracking-widest text-slate-400 ml-2">
+                <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-2">
                   Email Address
                 </label>
                 <input
@@ -165,12 +165,12 @@ export const Contact = () => {
                   onChange={handleChange}
                   placeholder="johndoe@example.com"
                   required
-                  className="w-full px-6 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all text-sm"
+                  className="w-full px-6 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all text-[16px] sm:text-sm"
                 />
               </div>
 
               <div className="space-y-2">
-                <label className="text-[16px] font-black uppercase tracking-widest text-slate-400 ml-2">
+                <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-2">
                   Message
                 </label>
                 <textarea
@@ -180,7 +180,7 @@ export const Contact = () => {
                   onChange={handleChange}
                   placeholder="How can we help you today?"
                   required
-                  className="w-full px-6 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all text-sm resize-none"
+                  className="w-full px-6 py-4 bg-white border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all text-[16px] sm:text-sm resize-none"
                 />
               </div>
 
