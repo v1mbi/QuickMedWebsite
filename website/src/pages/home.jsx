@@ -702,10 +702,10 @@ export default function Home() {
         <MotionLink
           to="/blog" // Changed from href to to
           variants={{
-            hidden: { opacity: 0, y: 20 },
+            hidden: { opacity: 1, y: 20 },
             visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
           }}
-          className="col-span-2 w-11/12 bg-rose-600 text-white font-bold text-3xl py-5 px-10 rounded-2xl shadow-md hover:bg-rose-700 transition-colors flex items-center gap-2 text-[0.525rem] sm:text-xl md:text-3xl  text-center"
+          className="col-span-2 w-11/12 bg-rose-600 text-white font-bold text-3xl py-5 px-10 rounded-2xl shadow-md hover:bg-rose-700 transition-colors flex items-center gap-2 text-md sm:text-xl md:text-3xl  text-center"
         >
           <span>Explore More Articles</span>
           <ArrowRight className="w-4 h-4" />
