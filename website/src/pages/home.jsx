@@ -707,7 +707,7 @@ export default function Home() {
           }}
           className="col-span-2 w-11/12 bg-rose-600 text-white font-bold  py-5 sm: px-10 rounded-2xl shadow-md hover:bg-rose-700 transition-colors flex items-center  gap-2 text-md sm:text-xl md:text-3xl  text-center"
         >
-          <span>Explore More Articles</span>
+          <span className="w-full text-center">Explore More Articles</span>
           <ArrowRight className="w-4 h-4" />
         </MotionLink>
       </motion.section>
