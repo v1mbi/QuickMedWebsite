@@ -62,7 +62,7 @@ const InsuranceSteps = () => {
                 >
                   {step.title}
                 </h3>
-                <p className="text-slate-600 leading-relaxed text-[7px] sm:text-sm md:text-base">
+                <p className="text-slate-600 leading-relaxed text-[10px] sm:text-sm md:text-base">
                   {step.desc}
                 </p>
               </div>
