@@ -85,7 +85,7 @@ const AssetInsurance = () => {
       </div>
       <AllInsuranceAdvantages />
       <Contact />
-      <Footer />
+    
     </div>
   );
 };

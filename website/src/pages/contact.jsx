@@ -367,7 +367,7 @@ const ContactPage = () => {
           </motion.main>
         </div>
       </div>
-      <Footer />
+   
     </div>
   );
 };

@@ -831,7 +831,7 @@ export default function Home() {
         </h2>
       </div>
       <Contact />
-      <Footer />
+   
     </div>
   );
 }

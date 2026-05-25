@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FileDown, Clock, PhoneCall, MapPin } from "lucide-react";
+import serviceLocator from "../assets/service-locator.xlsx";
 
 const ProviderResources = () => {
   // SLOW CONTAINER VARIANTS: Slower stagger for child elements
@@ -62,7 +63,9 @@ const ProviderResources = () => {
             >
               Service Provider List
             </motion.h2>
-            <motion.button
+            <motion.a
+              href={serviceLocator}
+              download
               whileHover={{ scale: 1.02, backgroundColor: "#dc2626" }}
               whileTap={{ scale: 0.98 }}
               className="ml-auto 
@@ -73,7 +76,7 @@ const ProviderResources = () => {
             >
               <FileDown size={20} />
               <h1 className="hidden md:block">Download Now</h1>
-            </motion.button>
+            </motion.a>
           </div>
 
           <p className="text-slate-600 leading-relaxed mb-8 text-[0.75rem] sm:text-lg">
@@ -123,14 +126,15 @@ const ProviderResources = () => {
               Download PDF
             </motion.button>
 
-            <motion.button
+            <motion.a
+              href="/contact"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="flex-1 py-4 bg-blue-600 text-white font-bold rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-blue-100"
             >
               <PhoneCall size={20} />
               Contact Us
-            </motion.button>
+            </motion.a>
           </div>
         </motion.div>
       </motion.div>

@@ -133,7 +133,7 @@ useEffect(() => {
         </motion.div>
 
         <motion.div variants={componentVariants}>
-          <Footer />
+        
         </motion.div>
       </motion.div>
     </div>

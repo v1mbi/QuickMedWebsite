@@ -8,6 +8,7 @@ import HealthInsurance from './insurance/healthInsurance';
 import FuneralInsurance from './insurance/funeralInsurance';
 import AssetInsurance from './insurance/assetInsurance';
 import Home from "./home";
+import Footer from '../components/footer';
 
 
 export default function Router() {
@@ -20,9 +21,8 @@ export default function Router() {
       <Route path="/insurance/health" element={<HealthInsurance />} />
       <Route path="/insurance/funeral" element={<FuneralInsurance />} />
       <Route path="/insurance/asset" element={<AssetInsurance />} />
-      <Route path="/insurance/" element={<h1 className="w-full text-5xl text-center text-gray-800">Insurance Page</h1>} />
       <Route path="/contact" element={<ContactPage />} />
-    </Routes></div>
+    </Routes><Footer /></div>
     
   );
 }

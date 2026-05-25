@@ -91,7 +91,6 @@ const FAQ = () => {
 
       <ReviewMarquee />
 
-      <Footer />
     </div>
   );
 };
