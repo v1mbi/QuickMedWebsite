@@ -7,7 +7,7 @@ const Footer = () => {
   const pathname = useLocation().pathname;
 
   const quickLinks = [
-    { name: "Home", path: "/" },
+    { name: "Home", path: "/home" },
     { name: "Our Blog", path: "/blog" },
     { name: "Help & FAQ", path: "/faq" },
     { name: "Contact", path: "/contact" },
@@ -15,7 +15,7 @@ const Footer = () => {
 
   const insuranceLinks = [
     { name: "Health Insurance", path: "/insurance/health" },
-    { name: "Life Insurance", path: "/insurance/life" },
+    { name: "Funeral Insurance", path: "/insurance/funeral" },
     { name: "Asset Insurance", path: "/insurance/asset" },
   ];
 
