@@ -36,7 +36,7 @@ const InsuranceSteps = () => {
           <React.Fragment key={step.id}>
             <div
               className={`
-                relative z-10 w-full md:w-[85%] p-8 border-2 rounded-2xl transition-all duration-700 ease-in-out
+                relative z-10 w-full sm:w-[85%] p-8 border-2 rounded-2xl transition-all duration-700 ease-in-out
                 ${index === 1 ? "md:self-end" : "md:self-start"}
                 ${
                   activeStep === index
@@ -62,7 +62,7 @@ const InsuranceSteps = () => {
                 >
                   {step.title}
                 </h3>
-                <p className="text-slate-600 leading-relaxed text-sm md:text-base">
+                <p className="text-slate-600 leading-relaxed text-[7px] sm:text-sm md:text-base">
                   {step.desc}
                 </p>
               </div>
@@ -139,8 +139,8 @@ const InsuranceSteps = () => {
     top: 0,
     behavior: "smooth"
   })
-}} className="self-center mt-12 group relative px-14 py-4 bg-red-600 text-white font-bold rounded-full overflow-hidden transition-all hover:bg-red-700 active:scale-95 shadow-2xl shadow-red-200">
-          <span className="relative z-10 uppercase tracking-widest text-sm">
+}} className="self-center mt-12 group relative justify-center items-center sm:px-14 py-4 bg-red-600 text-white font-bold rounded-full overflow-hidden transition-all hover:bg-red-700 active:scale-95 shadow-2xl shadow-red-200">
+          <span className="relative z-10 uppercase tracking-widest text-center text-sm">
             Contact Us Today!
           </span>
           <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />

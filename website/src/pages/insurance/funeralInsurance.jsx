@@ -73,14 +73,14 @@ useEffect(() => {
         </motion.div>
 
         <motion.div variants={componentVariants}>
-          <div className="flex p-10 flex-col lg:flex-row">
+          <div className="flex p-2 sm:p-10 flex-col lg:flex-row">
             <div className="lg:w-3/5">
               <MultiStepForm
                 limits={limits}
                 title="Funeral Insurance"
               />
             </div>
-            <div className="lg:w-2/5 p-8">
+            <div className="lg:w-2/5 p-3 sm:p-8">
               <InsuranceSteps />
             </div>
           </div>

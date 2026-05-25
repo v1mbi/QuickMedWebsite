@@ -124,13 +124,13 @@ const MultiStepForm = ({ limits = [10, 20, 30, 40] ,title="Health Insurance"}) =
           />
         </div>
 
-        <div className="p-8 sm:p-12">
+        <div className="p-3 sm:p-12">
           <header className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 mb-10">
             <div>
-              <h1 className="text-3xl font-jakarta font-black text-slate-800 tracking-tight leading-tight">
+              <h1 className="text-xl sm:text-3xl font-jakarta font-black text-slate-800 tracking-tight leading-tight">
                 {title}
               </h1>
-              <p className="text-blue-500 font-bold text-[10px] uppercase tracking-[0.2em] mt-1">
+              <p className="text-blue-500 font-bold text-[8xl] sm:text-[10px] uppercase tracking-[0.2em] mt-1">
                 Policy Registration
               </p>
             </div>
@@ -174,6 +174,7 @@ const MultiStepForm = ({ limits = [10, 20, 30, 40] ,title="Health Insurance"}) =
                         onChange={(e) =>
                           handleInputChange("firstName", e.target.value)
                         }
+                        className="text-[16px] sm:text-sm"
                       />
                       <FloatingInput
                         label="Surname"
@@ -182,6 +183,7 @@ const MultiStepForm = ({ limits = [10, 20, 30, 40] ,title="Health Insurance"}) =
                         onChange={(e) =>
                           handleInputChange("surname", e.target.value)
                         }
+                        className="text-[16px] sm:text-sm"
                       />
                     </div>
 
@@ -193,6 +195,7 @@ const MultiStepForm = ({ limits = [10, 20, 30, 40] ,title="Health Insurance"}) =
                       onChange={(e) =>
                         handleInputChange("email", e.target.value)
                       }
+                      className="text-[16px] sm:text-sm"
                     />
 
                     {/* Allowance Row */}
@@ -203,6 +206,7 @@ const MultiStepForm = ({ limits = [10, 20, 30, 40] ,title="Health Insurance"}) =
                       onChange={(e) =>
                         handleInputChange("allowance", e.target.value)
                       }
+                      className="text-[16px] sm:text-sm"
                     />
 
                     {/* Cellphone Row - Expanded Layout */}
@@ -210,7 +214,7 @@ const MultiStepForm = ({ limits = [10, 20, 30, 40] ,title="Health Insurance"}) =
                       <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">
                         Cellphone Number
                       </label>
-                      <div className="flex gap-3">
+                      <div className="flex flex-col sm:flex-row h-fit gap-3">
                         <div className="relative w-32 shrink-0">
                           <select
                             value={selectedDialCode}
@@ -237,7 +241,7 @@ const MultiStepForm = ({ limits = [10, 20, 30, 40] ,title="Health Insurance"}) =
                           onChange={(e) =>
                             handleInputChange("cellphone", e.target.value)
                           }
-                          className="flex-1 h-[58px] px-6 bg-white/50 border border-slate-100 rounded-2xl focus:ring-4 focus:ring-blue-100 focus:outline-none text-sm text-slate-700 font-bold placeholder:text-slate-300 transition-all"
+                          className="sm:flex-1 h-[58px] px-6 bg-white/50 border border-slate-100 rounded-2xl focus:ring-4 focus:ring-blue-100 focus:outline-none text-[16px] sm:text-sm text-slate-700 font-bold placeholder:text-slate-300 transition-all"
                         />
                       </div>
                     </div>
@@ -245,7 +249,7 @@ const MultiStepForm = ({ limits = [10, 20, 30, 40] ,title="Health Insurance"}) =
                     <div className="pt-6">
                       <button
                         onClick={() => setStep(2)}
-                        className="w-full py-5 bg-blue-600 text-white rounded-[2rem] font-black text-sm uppercase tracking-widest shadow-xl shadow-blue-100 hover:bg-blue-700 hover:scale-[1.01] active:scale-[0.99] transition-all"
+                        className="w-full py-5 bg-blue-600 text-white rounded-[2rem] font-black text-[25px] sm:text-sm uppercase tracking-widest shadow-xl shadow-blue-100 hover:bg-blue-700 hover:scale-[1.01] active:scale-[0.99] transition-all"
                       >
                         Continue Application
                       </button>
@@ -261,6 +265,7 @@ const MultiStepForm = ({ limits = [10, 20, 30, 40] ,title="Health Insurance"}) =
                         onChange={(e) =>
                           handleInputChange("gpName", e.target.value)
                         }
+                        className="text-[16px] sm:text-sm"
                       />
                       <FloatingSelect
                         label="Source of Funds"
@@ -367,7 +372,7 @@ const MultiStepForm = ({ limits = [10, 20, 30, 40] ,title="Health Insurance"}) =
                         <button
                           disabled={isSubmitDisabled}
                           onClick={handleSubmit}
-                          className={`flex-1 py-5 rounded-[2rem] font-black text-sm uppercase tracking-widest text-white transition-all ${isSubmitDisabled ? "bg-slate-200 text-slate-400 cursor-not-allowed" : "bg-gradient-to-r from-blue-600 to-red-500 shadow-2xl shadow-blue-100"}`}
+                          className={`flex-1 py-5 rounded-[2rem] font-black text-xs sm:text-sm uppercase tracking-widest text-white transition-all ${isSubmitDisabled ? "bg-slate-200 text-slate-400 cursor-not-allowed" : "bg-gradient-to-r from-blue-600 to-red-500 shadow-2xl shadow-blue-100"}`}
                         >
                           {formData.country === "South Africa"
                             ? "ZIM Restricted"
@@ -387,10 +392,9 @@ const MultiStepForm = ({ limits = [10, 20, 30, 40] ,title="Health Insurance"}) =
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-blue-50 text-blue-600 rounded-3xl mb-6 shadow-inner shadow-blue-100/50">
                   <ShieldCheck size={40} />
                 </div>
-                <h2 className="text-3xl font-black text-slate-800 tracking-tight">
+                <h2 className="text-xl sm:text-3xl font-black text-slate-800 tracking-tight">
                   Application Processed
                 </h2>
-                
               </motion.div>
             )}
           </AnimatePresence>
