@@ -61,7 +61,7 @@ const FuneralTitle = () => {
             transition={{ delay: 0.6, duration: 0.5 }}
             whileHover={{ scale: 1.02, backgroundColor: "#dc2626" }}
             whileTap={{ scale: 0.98 }}
-            className="w-fit font-montserrat py-4 md:py-3 px-10 bg-gradient-to-b  from-red-500 to-red-600 text-white rounded-2xl font-bold text-sm shadow-lg shadow-red-100 uppercase tracking-widest transition-all"
+            className="w-fit font-montserrat py-2 sm:py-4 md:py-3 px-5 sm:px-10 bg-gradient-to-b  from-red-500 to-red-600 text-white rounded-xl sm:rounded-2xl font-bold text-[12px] sm:text-sm shadow-lg shadow-red-100 uppercase tracking-widest transition-all"
           >
             Invest in the Future
           </motion.button>
