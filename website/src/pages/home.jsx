@@ -653,11 +653,11 @@ export default function Home() {
           }}
           className="col-span-2 items-center font-jakarta justify-center"
         >
-          <h1 className="text-3xl sm:text-4xl w-fit mx-auto md:text-5xl lg:text-6xl flex font-bold text-center text-slate-900 tracking-tighter leading-none mb-2 sm:mb-6 px-6">
+          <h1 className="text-xl sm:text-4xl w-fit mx-auto md:text-5xl lg:text-6xl flex font-bold text-center text-slate-900 tracking-tighter leading-none mb-2 sm:mb-6 px-6">
             Insights into <br />
             <span className="text-red-500">QuickMed</span> Connections
           </h1>
-          <p className="text-slate-500 w-full text-center mb-8 sm:mb-20 text-xs md:text-sm font-medium tracking-[0.2em] uppercase italic px-6">
+          <p className="text-slate-500 w-full text-center mb-8 sm:mb-20 text-[0.425rem] md:text-sm font-medium tracking-[0.2em] uppercase italic px-6">
             "Life happens. We just make it easier to handle."
           </p>
         </motion.div>
