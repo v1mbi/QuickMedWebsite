@@ -128,7 +128,7 @@ const FAQCard = ({ faq, isOpen, isHovered, onHoverStart, onHoverEnd }) => {
         ${faq.size === "lg" ? "md:col-span-2 md:row-span-2 md:h-full" : ""}
         ${faq.size === "md" ? "md:col-span-2" : ""}
         
-         min-h-[220px] sm:min-h-[160px] md:min-h-[240px] flex flex-col justify-between
+         min-h-[400px] sm:min-h-[160px] md:min-h-[240px] flex flex-col justify-between
       `}
     >
       <div className="flex flex-col gap-4">
