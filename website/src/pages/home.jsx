@@ -250,10 +250,10 @@ export default function Home() {
                       }}
                       className="bg-white border border-red-300 rounded-2xl p-4 sm:p-5 flex items-center gap-4 shadow-red-300 shadow-md"
                     >
-                      <div className="bg-rose-100 border border-rose-200 text-rose-600 font-extrabold text-[0.625rem] sm:text-xl px-4 py-2 rounded-xl flex-shrink-0 min-w-[70px] text-center shadow-inner">
+                      <div className="bg-rose-100 border border-rose-200 text-rose-600 font-extrabold text-[0.825rem] sm:text-xl px-4 py-2 rounded-xl flex-shrink-0 min-w-[70px] text-center shadow-inner">
                         80+
                       </div>
-                      <div className="font-bold text-[0.625rem] sm:text-2xl text-red-600 tracking-tight">
+                      <div className="font-bold text-[0.825rem] sm:text-2xl text-red-600 tracking-tight">
                         Affordable Plans
                       </div>
                     </motion.div>
@@ -272,7 +272,7 @@ export default function Home() {
                           <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-red-100/70 text-red-600 flex items-center justify-center mb-2 group-hover:bg-red-600 group-hover:text-white transition-all">
                             <Heart className="w-4 h-4 sm:w-5 sm:h-5" />
                           </div>
-                          <span className="font-bold text-[0.425rem] sm:text-sm text-slate-700 group-hover:text-red-950">
+                          <span className="font-bold text-[0.525rem] sm:text-sm text-slate-700 group-hover:text-red-950">
                             Health
                           </span>
                         </motion.div>
@@ -285,7 +285,7 @@ export default function Home() {
                           <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-red-100/70 text-red-600 flex items-center justify-center mb-2 group-hover:bg-red-600 group-hover:text-white transition-all">
                             <Umbrella className="w-4 h-4 sm:w-5 sm:h-5" />
                           </div>
-                          <span className="font-bold text-[0.425rem] sm:text-sm text-slate-700 group-hover:text-red-950">
+                          <span className="font-bold text-[0.525rem] sm:text-sm text-slate-700 group-hover:text-red-950">
                             Funeral
                           </span>
                         </motion.div>
@@ -298,14 +298,14 @@ export default function Home() {
                           <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-red-100/70 text-red-600 flex items-center justify-center mb-2 group-hover:bg-red-600 group-hover:text-white transition-all">
                             <Coins className="w-4 h-4 sm:w-5 sm:h-5" />
                           </div>
-                          <span className="font-bold text-[0.425rem] sm:text-sm text-slate-700 group-hover:text-red-950">
+                          <span className="font-bold text-[0.525rem] sm:text-sm text-slate-700 group-hover:text-red-950">
                             Assets
                           </span>
                         </motion.div>
                       </div>
 
                       {/* Bottom Accent Subtitle Footer text */}
-                      <div className="text-center text-[10px] sm:text-xs font-semibold tracking-wide text-red-400 uppercase mt-6 border-t border-slate-100 pt-4">
+                      <div className="text-center text-[10px] sm:text-xs font-semibold tracking-wide text-red-400 uppercase mt-2 sm:mt-6 border-t border-slate-100 pt-2 sm:pt-4">
                         accommodate all your insurance needs
                       </div>
                     </motion.div>
