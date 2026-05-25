@@ -160,11 +160,7 @@ const AssetQuoteForm = () => {
   const currentType = INSURANCE_TYPES.find((t) => t.id === insuranceType);
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center  p-4 overflow-hidden">
-      {/* 
-        Modified: Replaced 'layout' prop with slower scroll-triggered animation.
-        Increased duration to 1.2s and used custom ease for a weighted feel.
-      */}
+    <div className="min-h-screen w-full flex items-center justify-center p-4 overflow-hidden">
       <motion.div
         initial={{ opacity: 1, y: 50, scale: 0.98 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -197,7 +193,7 @@ const AssetQuoteForm = () => {
               <motion.div
                 className="absolute h-10 w-[calc(50%-4px)] bg-white rounded-xl shadow-sm"
                 animate={{ x: formData.country === "Zimbabwe" ? 0 : "100%" }}
-                transition={{ duration: 0.8, ease: "easeInOut" }} // Slowed country toggle
+                transition={{ duration: 0.8, ease: "easeInOut" }}
               />
               <button
                 onClick={() => handleInputChange("country", "Zimbabwe")}
@@ -218,11 +214,10 @@ const AssetQuoteForm = () => {
             {!submitted ? (
               <motion.div
                 key={`${step}-${insuranceType}`}
-                // Modified: Changed horizontal slide to slow fade/up slide
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.9, ease: [0.25, 1, 0.5, 1] }} // Relaxed duration/ease
+                transition={{ duration: 0.9, ease: [0.25, 1, 0.5, 1] }}
               >
                 {step === 1 ? (
                   <div className="space-y-6">
@@ -253,7 +248,6 @@ const AssetQuoteForm = () => {
                         onChange={(e) =>
                           handleInputChange("name", e.target.value)
                         }
-                        className="text-[20px] sm:text-sm"
                       />
                       <FloatingInput
                         label="Email Address"
@@ -263,7 +257,6 @@ const AssetQuoteForm = () => {
                         onChange={(e) =>
                           handleInputChange("email", e.target.value)
                         }
-                        className="text-[20px] sm:text-sm"
                       />
                     </div>
 
@@ -275,7 +268,6 @@ const AssetQuoteForm = () => {
                         onChange={(e) =>
                           handleInputChange("sourceOfFunds", e.target.value)
                         }
-                        className="text-[20px] sm:text-sm"
                       />
                       <FloatingSelect
                         label="Payout Limit (USD)"
@@ -294,7 +286,6 @@ const AssetQuoteForm = () => {
                         onChange={(e) =>
                           handleInputChange("allowance", e.target.value)
                         }
-                        className="text-[20px] sm:text-sm"
                       />
                     </div>
 
@@ -307,7 +298,6 @@ const AssetQuoteForm = () => {
                         onChange={(e) =>
                           handleInputChange("valueOfAssets", e.target.value)
                         }
-                        className="text-[20px] sm:text-sm"
                       />
                       <div className="space-y-1.5">
                         <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">
@@ -319,7 +309,7 @@ const AssetQuoteForm = () => {
                             onChange={(e) =>
                               setSelectedDialCode(e.target.value)
                             }
-                            className="w-full sm:w-24 h-[58px] bg-white/50 border border-slate-100 rounded-2xl text-xs font-bold px-2 appearance-none cursor-pointer duration-500 transition-all focus:ring-4 focus:ring-blue-100 focus:outline-none"
+                            className="w-24 sm:w-20  md:w-24 h-[58px] bg-white/50 border border-slate-100 rounded-2xl text-base md:text-xs font-bold px-2 appearance-none cursor-pointer duration-500 transition-all focus:ring-4 focus:ring-blue-100 focus:outline-none"
                           >
                             {COUNTRY_CODES.map((c) => (
                               <option key={c.code} value={c.code}>
@@ -334,7 +324,7 @@ const AssetQuoteForm = () => {
                             onChange={(e) =>
                               handleInputChange("cellphone", e.target.value)
                             }
-                            className="flex-1 h-[58px] px-4 bg-white/50 border border-slate-100 rounded-2xl text-[20px] sm:text-sm font-bold focus:ring-4 focus:ring-blue-100 focus:outline-none transition-all duration-500"
+                            className="flex-1 w-full h-[58px] px-4 bg-white/50 border border-slate-100 rounded-2xl text-base md:text-sm font-bold focus:ring-4 focus:ring-blue-100 focus:outline-none transition-all duration-500"
                           />
                         </div>
                       </div>
@@ -359,7 +349,6 @@ const AssetQuoteForm = () => {
                             onChange={(e) =>
                               handleInputChange("regNumber", e.target.value)
                             }
-                            className="text-[20px] sm:text-sm"
                           />
                           <FloatingInput
                             label="Market Value"
@@ -368,7 +357,6 @@ const AssetQuoteForm = () => {
                             onChange={(e) =>
                               handleInputChange("vehicleValue", e.target.value)
                             }
-                            className="text-[20px] sm:text-sm"
                           />
                         </>
                       )}
@@ -382,7 +370,6 @@ const AssetQuoteForm = () => {
                             onChange={(e) =>
                               handleInputChange("deviceModel", e.target.value)
                             }
-                            className="text-[20px] sm:text-sm"
                           />
                           <FloatingInput
                             label="Serial / IMEI"
@@ -391,7 +378,6 @@ const AssetQuoteForm = () => {
                             onChange={(e) =>
                               handleInputChange("serialNumber", e.target.value)
                             }
-                            className="text-[20px] sm:text-sm"
                           />
                         </>
                       )}
@@ -404,7 +390,6 @@ const AssetQuoteForm = () => {
                           onChange={(e) =>
                             handleInputChange("address", e.target.value)
                           }
-                          className="text-[20px] sm:text-sm"
                         />
                       )}
                       {insuranceType === "crop" && (
@@ -415,7 +400,6 @@ const AssetQuoteForm = () => {
                           onChange={(e) =>
                             handleInputChange("cropType", e.target.value)
                           }
-                          className="text-[20px] sm:text-sm"
                         />
                       )}
                       {insuranceType === "livestock" && (
@@ -434,7 +418,6 @@ const AssetQuoteForm = () => {
                               Math.max(1, formData.livestockCount - 1),
                             )
                           }
-                          className="text-[20px] sm:text-sm"
                         />
                       )}
                     </div>
@@ -451,7 +434,6 @@ const AssetQuoteForm = () => {
                             onChange={(e) =>
                               handleInputChange("privacy", e.target.checked)
                             }
-                            className="text-[20px] sm:text-sm"
                           />
                           <AnimatePresence>
                             {formData.privacy && (
@@ -459,7 +441,7 @@ const AssetQuoteForm = () => {
                                 initial={{ opacity: 0, scale: 0.5 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 0.5 }}
-                                transition={{ duration: 0.5 }} // Slowed checkmark fade
+                                transition={{ duration: 0.5 }}
                               >
                                 <Check size={16} className="text-white" />
                               </motion.div>
@@ -495,7 +477,7 @@ const AssetQuoteForm = () => {
               <motion.div
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }} // Slower success reveal
+                transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
                 className="text-center py-6"
               >
                 <motion.div
@@ -507,7 +489,7 @@ const AssetQuoteForm = () => {
                     type: "spring",
                     stiffness: 50,
                     damping: 15,
-                  }} // Slower icon bounce
+                  }}
                   className="w-20 h-20 bg-blue-50 text-blue-600 rounded-3xl mb-6 mx-auto flex items-center justify-center"
                 >
                   <ShieldCheck size={40} />
@@ -524,7 +506,7 @@ const AssetQuoteForm = () => {
   );
 };
 
-// Sub-components (transitions slowed from 300ms to 500ms baseline)
+// Sub-components optimized with text-base mobile defaults (16px) to eliminate Safari dynamic zoom thresholds
 const FloatingInput = ({ label, ...props }) => (
   <div className="space-y-1.5 flex-1">
     <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">
@@ -532,7 +514,7 @@ const FloatingInput = ({ label, ...props }) => (
     </label>
     <input
       {...props}
-      className="w-full h-[58px] px-5 bg-white/50 border border-slate-100 rounded-2xl focus:ring-4 focus:ring-blue-100 focus:outline-none transition-all duration-500 text-sm font-bold text-slate-700"
+      className="w-full h-[58px] px-5 bg-white/50 border border-slate-100 rounded-2xl focus:ring-4 focus:ring-blue-100 focus:outline-none transition-all duration-500 text-base md:text-sm font-bold text-slate-700"
     />
   </div>
 );
@@ -545,7 +527,7 @@ const FloatingSelect = ({ label, options, ...props }) => (
     <div className="relative">
       <select
         {...props}
-        className="w-full h-[58px] px-5 bg-white/50 border border-slate-100 rounded-2xl appearance-none cursor-pointer text-sm font-bold text-slate-700 transition-all duration-500 focus:ring-4 focus:ring-blue-100 focus:outline-none"
+        className="w-full h-[58px] px-5 bg-white/50 border border-slate-100 rounded-2xl appearance-none cursor-pointer text-base md:text-sm font-bold text-slate-700 transition-all duration-500 focus:ring-4 focus:ring-blue-100 focus:outline-none"
       >
         <option value="" disabled hidden>
           Select...
