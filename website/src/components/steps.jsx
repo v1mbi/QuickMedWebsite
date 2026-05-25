@@ -139,7 +139,7 @@ const InsuranceSteps = () => {
     top: 0,
     behavior: "smooth"
   })
-}} className="self-center mt-12 group relative justify-center items-center sm:px-14 py-4 bg-red-600 text-white font-bold rounded-full overflow-hidden transition-all hover:bg-red-700 active:scale-95 shadow-2xl shadow-red-200">
+}} className="self-center mt-12 group relative justify-center items-center px-5 sm:px-14 py-4 bg-red-600 text-white font-bold rounded-full overflow-hidden transition-all hover:bg-red-700 active:scale-95 shadow-2xl shadow-red-200">
           <span className="relative z-10 uppercase tracking-widest text-center text-sm">
             Contact Us Today!
           </span>

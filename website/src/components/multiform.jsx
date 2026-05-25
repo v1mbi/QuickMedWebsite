@@ -124,13 +124,13 @@ const MultiStepForm = ({ limits = [10, 20, 30, 40] ,title="Health Insurance"}) =
           />
         </div>
 
-        <div className="p-3 sm:p-12">
+        <div className="p-4 pt-7 sm:p-12 sm:pt-12">
           <header className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 mb-10">
             <div>
               <h1 className="text-xl sm:text-3xl font-jakarta font-black text-slate-800 tracking-tight leading-tight">
                 {title}
               </h1>
-              <p className="text-blue-500 font-bold text-[8xl] sm:text-[10px] uppercase tracking-[0.2em] mt-1">
+              <p className="text-blue-500 font-bold text-[6xl] sm:text-[10px] uppercase tracking-[0.2em] mt-1">
                 Policy Registration
               </p>
             </div>
@@ -249,7 +249,7 @@ const MultiStepForm = ({ limits = [10, 20, 30, 40] ,title="Health Insurance"}) =
                     <div className="pt-6">
                       <button
                         onClick={() => setStep(2)}
-                        className="w-full py-5 bg-blue-600 text-white rounded-[2rem] font-black text-[25px] sm:text-sm uppercase tracking-widest shadow-xl shadow-blue-100 hover:bg-blue-700 hover:scale-[1.01] active:scale-[0.99] transition-all"
+                        className="w-full py-5 bg-blue-600 text-white rounded-[2rem] font-black text-[10px] sm:text-[25px] sm:text-sm uppercase tracking-widest shadow-xl shadow-blue-100 hover:bg-blue-700 hover:scale-[1.01] active:scale-[0.99] transition-all"
                       >
                         Continue Application
                       </button>
