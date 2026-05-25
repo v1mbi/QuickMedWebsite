@@ -12,7 +12,7 @@ const AssetInsurance = () => {
       <div className="relative w-full h-[75vh] flex items-center justify-center font-sans overflow-hidden">
             {/* 1. Background Image Layer */}
             <motion.div
-              initial={{ opacity: 0, scale: 1.05 }}
+              initial={{ opacity: 1, scale: 1.05 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.8, ease: "easeOut" }}
               className="absolute inset-0 -z-10"
@@ -31,7 +31,7 @@ const AssetInsurance = () => {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
-                className="text-xs font-bold tracking-[0.3em] text-red-600 uppercase mb-4"
+                className="text-[0.425rem] sm:text-xs  font-bold tracking-[0.3em] text-red-600 uppercase mb-4"
               >
                 Generation Health • Reliable Coverage
               </motion.span>
@@ -43,7 +43,7 @@ const AssetInsurance = () => {
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
                 className="bg-white/60 w-full border border-white/40 rounded-[2.5rem] py-12 md:py-16 shadow-2xl shadow-slate-200/50 backdrop-blur-xl"
               >
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-slate-900 tracking-tighter text-center font-sans leading-none">
+                <h1 className="text-5xl font-jakarta md:text-7xl lg:text-8xl font-bold text-slate-900 tracking-tighter text-center  leading-none">
                   Asset <span className="text-red-600">Insurance</span>
                 </h1>
               </motion.div>
@@ -56,7 +56,7 @@ const AssetInsurance = () => {
                   transition={{ delay: 0.5, duration: 0.5 }}
                   whileHover={{ scale: 1.02, backgroundColor: "#2563eb" }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-fit py-4 md:py-3 px-10 bg-gradient-to-b  from-blue-500 to-blue-600 text-white rounded-2xl font-bold text-sm shadow-lg shadow-blue-100 uppercase tracking-widest transition-all"
+                  className="w-fit py-2 sm:py-4 font-montserrat md:py-3 px-5 sm:px-10 bg-gradient-to-b  from-blue-500 to-blue-600 text-white rounded-xl sm:rounded-2xl font-bold text-[12px] sm:text-sm shadow-lg shadow-blue-100 uppercase tracking-widest transition-all"
                 >
                   Supporting Families Abroad
                 </motion.button>
@@ -67,7 +67,7 @@ const AssetInsurance = () => {
                   transition={{ delay: 0.6, duration: 0.5 }}
                   whileHover={{ scale: 1.02, backgroundColor: "#dc2626" }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-fit py-4 md:py-3 px-10 bg-gradient-to-b  from-red-500 to-red-600 text-white rounded-2xl font-bold text-sm shadow-lg shadow-red-100 uppercase tracking-widest transition-all"
+                  className="w-fit font-montserrat py-2 sm:py-4 md:py-3 px-5 sm:px-10 bg-gradient-to-b  from-red-500 to-red-600 text-white rounded-xl sm:rounded-2xl font-bold text-[12px] sm:text-sm shadow-lg shadow-red-100 uppercase tracking-widest transition-all"
                 >
                   Invest in the Future
                 </motion.button>
