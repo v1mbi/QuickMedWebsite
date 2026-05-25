@@ -88,7 +88,7 @@ export default function Blog() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <AnimatePresence>
-            {[...blogs, ...blogs, ...blogs, ...blogs, ...blogs].map(
+            {blogs.map(
               (blog, index) => (
                 <motion.div
                   key={index}
@@ -152,7 +152,7 @@ export default function Blog() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {link.map((item, index) => (
+            {[...link, ...link, ...link, ...link].map((item, index) => (
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.05 }}
