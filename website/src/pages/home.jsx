@@ -305,7 +305,7 @@ export default function Home() {
                       </div>
 
                       {/* Bottom Accent Subtitle Footer text */}
-                      <div className="text-center text-[10px] sm:text-xs font-semibold tracking-wide text-red-400 uppercase sm:mt-6 border-t border-slate-100 pt-2 sm:pt-4">
+                      <div className="text-center text-[10px] sm:text-xs font-semibold tracking-wide text-red-400 uppercase mt-2 sm:mt-6 border-t border-slate-100 pt-2 sm:pt-4">
                         accommodate all your insurance needs
                       </div>
                     </motion.div>
