@@ -13,18 +13,18 @@ import {
   Heart,
   Umbrella,
   Coins,
-  Phone
+  Phone,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { getSanityData } from "../functions/outsource_media";
 import Footer from "../components/footer";
-import blog from "../components/blogCard"
+import blog from "../components/blogCard";
 import videoSrc from "../assets/loop.mp4";
 import TextBlogCard from "../components/textBlogCard";
 import BlogCard from "../components/blogCard";
-import {Contact} from "../components/contact"
+import { Contact } from "../components/contact";
 
 export default function Home() {
   const MotionLink = motion.create(Link);
@@ -52,7 +52,6 @@ export default function Home() {
   ];
 
   // 1. Double the array so it seamlessly wraps around when it hits the end
-
 
   // 2. Math parameters matching tailwind widths precisely
   // Card width (280px mobile / 360px desktop) + Gap width (24px mobile / 32px desktop)
@@ -93,7 +92,7 @@ export default function Home() {
 
   // Automatically transition from Phase 1 to Phase 2 content
   useEffect(() => {
-    getSanityData('blog').then(setBlogs);
+    getSanityData("blog").then(setBlogs);
     const timer = setTimeout(() => {
       setCurrentPhase(2);
     }, 4500); // Adjust this value to control how long Phase 1 stays on screen
@@ -254,7 +253,7 @@ export default function Home() {
                       <div className="bg-rose-100 border border-rose-200 text-rose-600 font-extrabold text-lg sm:text-xl px-4 py-2 rounded-xl flex-shrink-0 min-w-[70px] text-center shadow-inner">
                         80+
                       </div>
-                      <div className="font-bold text-[0.525rem] sm:text-2xl text-red-600 tracking-tight">
+                      <div className="font-bold text-[0.325rem] sm:text-2xl text-red-600 tracking-tight">
                         Affordable Plans
                       </div>
                     </motion.div>
@@ -273,7 +272,7 @@ export default function Home() {
                           <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-red-100/70 text-red-600 flex items-center justify-center mb-2 group-hover:bg-red-600 group-hover:text-white transition-all">
                             <Heart className="w-4 h-4 sm:w-5 sm:h-5" />
                           </div>
-                          <span className="font-bold text-[0.525rem] sm:text-sm text-slate-700 group-hover:text-red-950">
+                          <span className="font-bold text-[0.425rem] sm:text-sm text-slate-700 group-hover:text-red-950">
                             Health
                           </span>
                         </motion.div>
@@ -286,7 +285,7 @@ export default function Home() {
                           <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-red-100/70 text-red-600 flex items-center justify-center mb-2 group-hover:bg-red-600 group-hover:text-white transition-all">
                             <Umbrella className="w-4 h-4 sm:w-5 sm:h-5" />
                           </div>
-                          <span className="font-bold text-[0.525rem] sm:text-sm text-slate-700 group-hover:text-red-950">
+                          <span className="font-bold text-[0.425rem] sm:text-sm text-slate-700 group-hover:text-red-950">
                             Funeral
                           </span>
                         </motion.div>
@@ -299,7 +298,7 @@ export default function Home() {
                           <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-red-100/70 text-red-600 flex items-center justify-center mb-2 group-hover:bg-red-600 group-hover:text-white transition-all">
                             <Coins className="w-4 h-4 sm:w-5 sm:h-5" />
                           </div>
-                          <span className="font-bold text-[0.525rem] sm:text-sm text-slate-700 group-hover:text-red-950">
+                          <span className="font-bold text-[0.425rem] sm:text-sm text-slate-700 group-hover:text-red-950">
                             Assets
                           </span>
                         </motion.div>
