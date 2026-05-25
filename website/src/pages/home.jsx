@@ -725,7 +725,7 @@ export default function Home() {
             <h1 className="text-lg sm:text-4xl font-jakarta md:text-3xl lg:text-4xl mx-auto md:mx-0 flex flex-col text-black font-bold">
               QuickMedConnections
             </h1>
-            <h1 className="text-[0.625rem] sm:text-xs font-montserrat  mt-2 text-slate-700 w-full leading-relaxed text-start">
+            <h1 className="text-[0.625rem] text-center  sm:text-xs font-montserrat  mt-2 text-slate-700 w-full leading-relaxed sm:text-start">
               QuickMed Connections is a UK-based representative underwritten by
               Generation Health Medical Aid Fund that empowers the Zimbabwean
               diaspora to easily secure, manage, and fund comprehensive medical

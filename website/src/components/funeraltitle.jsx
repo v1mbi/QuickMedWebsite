@@ -25,7 +25,7 @@ const FuneralTitle = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="text-xs  font-bold tracking-[0.3em] text-red-600 uppercase mb-4"
+          className="text-[0.425rem] sm:text-xs  font-bold tracking-[0.3em] text-red-600 uppercase mb-4"
         >
           Generation Health • Reliable Coverage
         </motion.span>
@@ -50,7 +50,7 @@ const FuneralTitle = () => {
             transition={{ delay: 0.5, duration: 0.5 }}
             whileHover={{ scale: 1.02, backgroundColor: "#2563eb" }}
             whileTap={{ scale: 0.98 }}
-            className="w-fit py-4 font-montserrat md:py-3 px-10 bg-gradient-to-b  from-blue-500 to-blue-600 text-white rounded-2xl font-bold text-sm shadow-lg shadow-blue-100 uppercase tracking-widest transition-all"
+            className="w-fit py-1 sm:py-4 font-montserrat md:py-3 px-3 sm:px-10 bg-gradient-to-b  from-blue-500 to-blue-600 text-white rounded-2xl font-bold text-[7px] sm:text-sm shadow-lg shadow-blue-100 uppercase tracking-widest transition-all"
           >
             Supporting Families Abroad
           </motion.button>
