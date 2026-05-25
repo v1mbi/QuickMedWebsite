@@ -9,12 +9,14 @@ import FuneralInsurance from './insurance/funeralInsurance';
 import AssetInsurance from './insurance/assetInsurance';
 import Home from "./home";
 import Footer from '../components/footer';
+import PrivacyPolicy from './privacy';
 
 
 export default function Router() {
   return (
     <div className="flex flex-col items-end w-screen space-y-20 overflow-y-hidden"><Navbar /><Routes >
       <Route path="/" element={<Home/>} />
+      <Route path="/privacy" element={<PrivacyPolicy />} />
       <Route path="/home" element={<Home/>} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/faq" element={<FAQ/>} />
