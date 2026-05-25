@@ -58,7 +58,7 @@ const ProviderResources = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1.4, ease: "easeOut" }} // Relaxed slide-down duration
-              className="text-xl font-montserrat md:text-2xl font-bold text-blue-600 tracking-tight"
+              className="text-[10px] sm:text-xl font-montserrat md:text-2xl font-bold text-blue-600 tracking-tight"
             >
               Service Provider List
             </motion.h2>
@@ -66,7 +66,7 @@ const ProviderResources = () => {
               whileHover={{ scale: 1.02, backgroundColor: "#dc2626" }}
               whileTap={{ scale: 0.98 }}
               className="ml-auto 
-              md:w-auto px-10 py-4 bg-red-500 text-white 
+              md:w-auto px-2 sm:px-10 py-1 sm:py-4 bg-red-500 text-white 
               font-bold rounded-2xl flex items-center justify-center 
               gap-2 shadow-lg shadow-red-200 transition-colors 
               uppercase tracking-wider"
@@ -76,7 +76,7 @@ const ProviderResources = () => {
             </motion.button>
           </div>
 
-          <p className="text-slate-600 leading-relaxed mb-8 text-lg">
+          <p className="text-slate-600 leading-relaxed mb-8 text-[0.75rem] sm:text-lg">
             This list shows all doctors and specialists currently available in
             your network. Find verified healthcare professionals close to your
             location, including general practitioners, dentists, and physical
@@ -102,14 +102,14 @@ const ProviderResources = () => {
             </motion.h2>
           </div>
 
-          <p className="text-slate-600 leading-relaxed mb-4 text-lg text-center md:text-left">
+          <p className="text-slate-600 leading-relaxed mb-4 text-[0.75rem] sm:text-lg text-center md:text-left">
             Review the expected waiting periods for different types of
             conditions and procedures. We provide transparent timelines for
             elective surgeries, specialist appointments, and chronic care
             management to help you plan your health journey effectively.
           </p>
 
-          <p className="text-slate-500 font-medium italic mb-8 text-center md:text-left">
+          <p className="text-slate-500 font-medium italic mb-8 text-[0.75rem] sm:text-center md:text-left">
             For more information you can always contact us.
           </p>
 

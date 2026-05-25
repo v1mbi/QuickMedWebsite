@@ -265,7 +265,7 @@ const MultiStepForm = ({ limits = [10, 20, 30, 40] ,title="Health Insurance"}) =
                         onChange={(e) =>
                           handleInputChange("gpName", e.target.value)
                         }
-                        className="text-[16px] sm:text-sm"
+                        className="text-[17px] sm:text-sm"
                       />
                       <FloatingSelect
                         label="Source of Funds"
