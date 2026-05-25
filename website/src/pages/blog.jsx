@@ -152,11 +152,11 @@ export default function Blog() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {[...link, ...link, ...link, ...link].map((item, index) => (
+            {link.map((item, index) => (
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.05 }}
-                className="rounded-3xl overflow-hidden shadow-sm"
+                className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-sm"
               >
                 <YtCard link={item.url} />
               </motion.div>
