@@ -7,6 +7,7 @@ import dove from "../assets/dove-svgrepo-com.svg";
 import heart from "../assets/hospital.svg";
 import bank from "../assets/bank.svg";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 const FAQ = () => {
   const categories = [

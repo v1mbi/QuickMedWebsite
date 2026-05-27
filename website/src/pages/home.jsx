@@ -88,16 +88,17 @@ export default function Home() {
 
   const [openFaq, setOpenFaq] = useState(0);
   const [currentPhase, setCurrentPhase] = useState(1);
-  const partners = ["STRIPE", "AIRBNB", "SHOPIFY", "AMAZON"];
+  const partners = ["Partner1", "Partner2", "Partner3", "Partner4"];
 
   // Automatically transition from Phase 1 to Phase 2 content
   useEffect(() => {
+    document.title = "Home | QuickMed Connections";
     getSanityData("blog").then(setBlogs);
     const timer = setTimeout(() => {
       setCurrentPhase(2);
     }, 4500); // Adjust this value to control how long Phase 1 stays on screen
     return () => clearTimeout(timer);
-    document.title = "Home | QuickMed Connections";
+    
   }, []);
 
   // Slide paths for Phase transitions

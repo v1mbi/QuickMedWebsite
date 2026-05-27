@@ -1,4 +1,4 @@
-import React, {useeEffect} from "react";
+import React, {useEffect} from "react";
 import AssetQuoteForm from "../../components/assetForm";
 import AllInsuranceAdvantages from "../../components/whyAsset";
 import { Contact } from "../../components/contact";

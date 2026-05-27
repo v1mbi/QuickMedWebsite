@@ -31,7 +31,7 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: "Home", path: "/" },
+    { name: "Home", path: "/home" },
     { name: "Blog", path: "/blog" },
     { name: "FAQ", path: "/faq" },
   ];
@@ -42,7 +42,14 @@ const Navbar = () => {
     { name: "Asset", path: "/insurance/asset" },
   ];
 
-  const isActive = (path) => location === path;
+  // UPDATED HELPER: Evaluates true for both / and /home when path is /home
+  const isActive = (path) => {
+    if (path === "/home") {
+      return location === "/home" || location === "/";
+    }
+    return location === path;
+  };
+
   const showGlass = scrolled || isOpen;
 
   return (
@@ -50,7 +57,7 @@ const Navbar = () => {
       className={`fixed top-0 w-full z-[100] transition-all duration-500 ${
         showGlass
           ? "bg-white/80 backdrop-blur-md shadow-sm py-2"
-          : "bg-transparent  py-4"
+          : "bg-transparent py-4"
       }`}
     >
       <div className="w-full px-6 flex items-center justify-between">
@@ -67,7 +74,9 @@ const Navbar = () => {
                 key={link.path}
                 to={link.path}
                 className={`text-sm font-medium transition-colors ${
-                  isActive(link.path) ? "text-red-600" : "text-slate-600 hover:text-red-600"
+                  isActive(link.path)
+                    ? "text-red-600"
+                    : "text-slate-600 hover:text-red-600"
                 }`}
               >
                 {link.name}
@@ -79,7 +88,9 @@ const Navbar = () => {
                   key={link.path}
                   to={link.path}
                   className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all ${
-                    isActive(link.path) ? "bg-red-600 text-white shadow-md" : "text-slate-500 hover:text-slate-900"
+                    isActive(link.path)
+                      ? "bg-red-600 text-white shadow-md"
+                      : "text-slate-500 hover:text-slate-900"
                   }`}
                 >
                   {link.name}
@@ -98,7 +109,7 @@ const Navbar = () => {
         {/* Mobile Toggle - Relative Z-index to keep it visible over drawer */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden relative z-[110] p-2 text-slate-900  rounded-xl"
+          className="lg:hidden relative z-[110] p-2 text-slate-900 rounded-xl"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -113,9 +124,9 @@ const Navbar = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsOpen(false)}
-              className="fixed inset-0  backdrop-blur-sm z-[80] lg:hidden"
+              className="fixed inset-0 backdrop-blur-sm z-[80] lg:hidden"
             />
-            
+
             {/* 3. FIX: Drawer with safe padding and scrollable content */}
             <motion.aside
               initial={{ x: "100%" }}
@@ -124,25 +135,52 @@ const Navbar = () => {
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
               className="fixed right-0 top-0 h-screen w-[280px] bg-white z-[90] lg:hidden flex flex-col shadow-2xl overflow-y-auto"
             >
-              <div className="p-6 flex flex-col h-full pt-24"> {/* pt-24 avoids logo overlap */}
+              <div className="p-6 flex flex-col h-full pt-24">
+                {" "}
+                {/* pt-24 avoids logo overlap */}
                 <nav className="flex flex-col space-y-1">
-                  <MobileLink to="/" icon={<LayoutGrid size={18} />} label="Home" active={isActive("/")} onClick={() => setIsOpen(false)} />
-                  
+                  {/* Target /home for mobile home route to coordinate with isActive updates */}
+                  <MobileLink
+                    to="/home"
+                    icon={<LayoutGrid size={18} />}
+                    label="Home"
+                    active={isActive("/home")}
+                    onClick={() => setIsOpen(false)}
+                  />
+
                   <div className="py-6">
                     <span className="text-[10px] font-bold text-red-600 uppercase tracking-widest ml-4">
                       Insurance Products
                     </span>
                     <div className="mt-3 space-y-1">
                       {insuranceLinks.map((link) => (
-                        <MobileLink key={link.path} to={link.path} label={link.name} active={isActive(link.path)} onClick={() => setIsOpen(false)} isSub />
+                        <MobileLink
+                          key={link.path}
+                          to={link.path}
+                          label={link.name}
+                          active={isActive(link.path)}
+                          onClick={() => setIsOpen(false)}
+                          isSub
+                        />
                       ))}
                     </div>
                   </div>
 
-                  <MobileLink to="/blog" icon={<BookOpen size={18} />} label="Our Blog" active={isActive("/blog")} onClick={() => setIsOpen(false)} />
-                  <MobileLink to="/faq" icon={<HelpCircle size={18} />} label="Help & FAQ" active={isActive("/faq")} onClick={() => setIsOpen(false)} />
+                  <MobileLink
+                    to="/blog"
+                    icon={<BookOpen size={18} />}
+                    label="Our Blog"
+                    active={isActive("/blog")}
+                    onClick={() => setIsOpen(false)}
+                  />
+                  <MobileLink
+                    to="/faq"
+                    icon={<HelpCircle size={18} />}
+                    label="Help & FAQ"
+                    active={isActive("/faq")}
+                    onClick={() => setIsOpen(false)}
+                  />
                 </nav>
-
                 <div className="mt-auto pb-6">
                   <Link
                     to="/contact"
@@ -169,7 +207,9 @@ const MobileLink = ({ to, icon, label, active, isSub = false, onClick }) => (
       active ? "bg-red-50 text-red-600" : "text-slate-600"
     } ${isSub ? "ml-6 py-2 text-sm" : "font-semibold"}`}
   >
-    {icon && <span className={active ? "text-red-600" : "text-slate-400"}>{icon}</span>}
+    {icon && (
+      <span className={active ? "text-red-600" : "text-slate-400"}>{icon}</span>
+    )}
     {label}
   </Link>
 );
