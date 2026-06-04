@@ -334,7 +334,7 @@ export default function Home() {
             {partners.map((partner, i) => (
               <span
                 key={i}
-                className="hover:text-slate-700 text-center w-full text-sm  transition duration-300"
+                className="hover:text-slate-700 text-center w-full text-xs sm:text-sm md:text-md lg:text-lg  transition duration-300"
               >
                 {partner}
               </span>
