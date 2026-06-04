@@ -88,7 +88,12 @@ export default function Home() {
 
   const [openFaq, setOpenFaq] = useState(0);
   const [currentPhase, setCurrentPhase] = useState(1);
-  const partners = ["Partner1", "Partner2", "Partner3", "Partner4"];
+  const partners = [
+    "ECONET Zimbabwe",
+    "Generation Health Medical Aid Society",
+    "Budget medical Aid Society",
+    "First Mutual Health",
+  ];
 
   // Automatically transition from Phase 1 to Phase 2 content
   useEffect(() => {
@@ -321,15 +326,15 @@ export default function Home() {
 
       {/* 2. TRUSTED BRAND PARTNERS */}
       <section className="bg-white py-10 border-y border-slate-100">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="  mx-4">
           <p className="text-center text-xs font-semibold uppercase tracking-widest text-slate-400 mb-6">
             Trusted by industry defining giants
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-12 font-bold text-md sm:text-xl tracking-tighter text-slate-400">
+          <div className="grid grid-cols-2 w-full md:grid-cols-4 justify-center items-start gap-6 sm:gap-12 font-bold text-md sm:text-xl tracking-tighter text-slate-400">
             {partners.map((partner, i) => (
               <span
                 key={i}
-                className="hover:text-slate-700 transition duration-300"
+                className="hover:text-slate-700 text-center w-full  transition duration-300"
               >
                 {partner}
               </span>
