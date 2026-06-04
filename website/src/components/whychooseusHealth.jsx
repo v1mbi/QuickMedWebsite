@@ -59,17 +59,17 @@ const WhyChooseUsHealth = ({points}) => {
               whileHover={{ y: -8, transition: { duration: 0.2 } }}
               className={`p-8 bg-white rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-red-500/5 transition-all duration-300 ${
                 index === 6
-                  ? " lg:col-span-3 flex flex-col lg:items-center lg:text-center"
+                  ? "lg:col-span-3 flex flex-col lg:items-center text-center"
                   : ""
               }`}
             >
               <div className="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center mb-6">
                 {point.icon}
               </div>
-              <h4 className="text-xl font-bold  text-slate-900 mb-3 tracking-tight">
+              <h4 className="text-xl font-bold text-slate-900 mb-3 tracking-tight">
                 {point.title}
               </h4>
-              <p className="text-slate-600 font-jakarta leading-relaxed max-w-sm">
+              <p className="text-slate-600 font-montserrat leading-relaxed max-w-sm">
                 {point.desc}
               </p>
             </motion.div>

@@ -33,7 +33,7 @@ export default function HealthInsurance() {
     <div className="w-full min-h-screen flex flex-col items-center justify-center ">
       <HealthTitle />
       <div className="flex flex-col space-y-20 lg:space-y-0 lg:flex-row items-center justify-center w-full py-2">
-        <div className="w-11/12 mx-auto bg-black lg:w-3/5">
+        <div className="w-11/12 lg:w-3/5">
           <MultiStepForm limits={limits} />
         </div>
         <div className="lg:w-2/5">

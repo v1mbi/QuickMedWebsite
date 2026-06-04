@@ -31,12 +31,12 @@ const InsuranceSteps = () => {
 
   return (
     <div className="w-full h-full min-h-fit bg-white p-6 md:p-10 flex flex-col items-center">
-      <div className="w-full flex flex-col relative">
+      <div className="w-full max-w-3xl flex flex-col relative">
         {steps.map((step, index) => (
           <React.Fragment key={step.id}>
             <div
               className={`
-                relative z-10  w-full sm:w-[85%] p-8 border-2 rounded-2xl transition-all duration-700  ease-in-out
+                relative z-10 w-full sm:w-[85%] p-8 border-2 rounded-2xl transition-all duration-700 ease-in-out
                 ${index === 1 ? "md:self-end" : "md:self-start"}
                 ${
                   activeStep === index
@@ -48,7 +48,7 @@ const InsuranceSteps = () => {
               {/* Number Badge */}
               <div
                 className={`
-                absolute -top-5 -left-5 w-12  h-12 rounded-full flex items-center justify-center 
+                absolute -top-5 -left-5 w-12 h-12 rounded-full flex items-center justify-center 
                 font-bold text-lg transition-all duration-500 border-4 border-white shadow-md
                 ${activeStep === index ? "bg-red-600 text-white animate-pulse" : "bg-slate-200 text-slate-500"}
               `}
