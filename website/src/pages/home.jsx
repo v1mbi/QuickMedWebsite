@@ -722,32 +722,45 @@ export default function Home() {
       </motion.section>
 
       {/* 6. ANNOUNCEMENTS */}
-      <div className=" bg-gradient-to-r flex items-center justify-center from-indigo-50 to-indigo-50 text-white py-4 px-6 text-center text-sm font-medium">
-        <div className="flex max-w-[1200px]  flex-col md:flex-row justify-center items-center gap-1">
-          <div className="font-jakarta md:text-8xl lg:text-9xl flex md:flex-col space-x-1 bg-blue-300 md:bg-transparent px-7 rounded-xl text-blue-700 justify-start items-end">
-            <h1>About</h1>
-            <h1>Us</h1>
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-indigo-50/30 to-blue-50 py-16 px-6 md:py-24">
+        {/* Subtle background glow for depth */}
+        <div className="absolute top-0 right-0 -z-10 h-72 w-72 rounded-full bg-blue-400/10 blur-3xl" />
+
+        <div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-8 md:flex-row md:items-start md:gap-12 lg:gap-16">
+          {/* Left Side: Dynamic Display Heading */}
+          <div className="flex flex-row gap-2 font-jakarta text-5xl font-black tracking-tight text-indigo-900 sm:text-6xl md:flex-col md:text-7xl lg:text-8xl">
+            <span className="opacity-40">About</span>
+            <span>Us.</span>
           </div>
-          <div className="flex flex-col items-start justify-start space-y-10 md:space-y-2 h-full p-3">
-            <h1 className="text-lg sm:text-4xl font-jakarta md:text-3xl lg:text-4xl mx-auto md:mx-0 flex flex-col text-black font-bold">
-              QuickMedConnections
-            </h1>
-            <h1 className="text-[0.625rem] text-center  sm:text-xs font-montserrat font-semibold text-black/50 mt-2 text-slate-700 w-full leading-relaxed sm:text-start">
-              QuickMed Connections is a UK-based representative underwritten by
-              Generation Health Medical Aid Fund that empowers the Zimbabwean
-              diaspora to easily secure, manage, and fund comprehensive medical
-              aid plans—ranging from basic essential care to premium private
-              hospital access—while also facilitating the procurement of
-              critical prescription medications to ensure reliable healthcare,
-              financial peace of mind, and continuous medical protection for
-              their families, dependents, and employees back home.
-            </h1>
-            <div className="text-rose-500 text-end mt-auto w-full font-bold uppercase tracking-widest text-[0.525rem] md:text-[0.4rem] lg:text-[0.525rem] md:text-xs bg-white/10 px-3 py-1 rounded-full backdrop-blur-sm">
-              Insurance you can trust
+
+          {/* Right Side: Content Block */}
+          <div className="flex max-w-xl flex-col items-start gap-5 text-center md:text-start">
+            <div className="space-y-2 w-full">
+              <span className="inline-block rounded-full bg-indigo-100/80 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-wider text-indigo-700 sm:text-xs">
+                Insurance you can trust
+              </span>
+              <h2 className="font-jakarta text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl lg:text-4xl">
+                QuickMedConnections
+              </h2>
             </div>
+
+            <p className="font-sans text-sm font-normal leading-relaxed text-slate-600 sm:text-base antialiased">
+              QuickMed Connections is a UK-based representative underwritten by
+              <span className="font-semibold text-slate-900">
+                {" "}
+                Generation Health Medical Aid Fund
+              </span>
+              . We empower the Zimbabwean diaspora to easily secure, manage, and
+              fund comprehensive medical aid plans—ranging from basic essential
+              care to premium private hospital access. By also facilitating the
+              procurement of critical prescription medications, we ensure
+              reliable healthcare, financial peace of mind, and continuous
+              medical protection for your families, dependents, and employees
+              back home.
+            </p>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* 7. FAQ & REVIEWS */}
       <div className="w-full bg-slate-50 py-12 overflow-hidden relative">
@@ -838,7 +851,6 @@ export default function Home() {
         </h2>
       </div>
       <Contact />
-   
     </div>
   );
 }

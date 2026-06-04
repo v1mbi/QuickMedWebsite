@@ -37,7 +37,7 @@ const HealthTitle = () => {
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
               className="bg-white/60 w-full border border-white/40 rounded-[2.5rem] py-12 md:py-16 shadow-2xl shadow-slate-200/50 backdrop-blur-xl"
             >
-              <h1 className="text-5xl font-jakarta md:text-7xl lg:text-8xl font-bold text-slate-900 tracking-tighter text-center  leading-none">
+              <h1 className="text-4xl sm:text-5xl font-jakarta md:text-7xl lg:text-7xl font-bold text-slate-900 tracking-tighter text-center  leading-none">
                 Health <span className="text-red-600">Insurance</span>
               </h1>
             </motion.div>
