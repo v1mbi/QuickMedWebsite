@@ -25,6 +25,7 @@ import videoSrc from "../assets/loop.mp4";
 import TextBlogCard from "../components/textBlogCard";
 import BlogCard from "../components/blogCard";
 import { Contact } from "../components/contact";
+import { Helmet } from "react-helmet-async";
 
 export default function Home() {
   const MotionLink = motion.create(Link);
@@ -98,32 +99,6 @@ export default function Home() {
   // Automatically transition from Phase 1 to Phase 2 content
   useEffect(() => {
     // 1. Dynamic Primary Title Link Generation
-    document.title =
-      "Bespoke Diaspora Risk Solutions & Insurance | QuickMed Connections";
-
-    // 2. Dynamic Meta Description Tag (Curated precisely to prevent trailing cutoff dots)
-    let metaDesc = document.querySelector('meta[name="description"]');
-    if (!metaDesc) {
-      metaDesc = document.createElement("meta");
-      metaDesc.setAttribute("name", "description");
-      document.head.appendChild(metaDesc);
-    }
-    metaDesc.setAttribute(
-      "content",
-      "QuickMed Connections designs affordable diaspora insurance solutions. Secure cross-border health insurance, funeral insurance and asset insurance coverage for your loved ones.",
-    );
-
-    // 3. Dynamic Meta Keywords Injection
-    let metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (!metaKeywords) {
-      metaKeywords = document.createElement("meta");
-      metaKeywords.setAttribute("name", "keywords");
-      document.head.appendChild(metaKeywords);
-    }
-    metaKeywords.setAttribute(
-      "content",
-      "diaspora, zimbabwe, zimbabwe insurance, health insurance, funeral insurance, asset insurance, diaspora, zimbabwe, south africa, sa, cross border medical aid, zimbabwe diaspora coverage, global health plans, medical risk solutions",
-    );
 
     getSanityData("blog").then(setBlogs);
     const timer = setTimeout(() => {
@@ -150,6 +125,30 @@ export default function Home() {
   return (
     <main className="font-montserrat bg-slate-50 w-full text-slate-800  antialiased scroll-smooth min-h-screen">
       {/* Dynamic Hero Section */}
+
+      <Helmet>
+        <title>
+          Bespoke Diaspora Risk Solutions & Insurance | QuickMed Connections
+        </title>
+        <meta
+          name="description"
+          content="QuickMed Connections designs affordable diaspora insurance solutions. Secure cross-border health insurance, funeral insurance and asset insurance coverage for your loved ones."
+        />
+        <meta
+          name="keywords"
+          content="diaspora, zimbabwe, zimbabwe insurance, health insurance, funeral insurance, asset insurance, diaspora, zimbabwe, south africa, sa, cross border medical aid, zimbabwe diaspora coverage, global health plans, medical risk solutions"
+        />
+        {/* Open Graph Tags for clean WhatsApp/Facebook previews */}
+        <meta
+          property="og:title"
+          content="Bespoke Diaspora Risk Solutions & Insurance | QuickMed Connections"
+        />
+        <meta
+          property="og:description"
+          content="Secure cross-border health insurance, funeral insurance and asset insurance coverage for your loved ones."
+        />
+      </Helmet>
+
       <section className="relative w-full overflow-hidden bg-white text-white min-h-[85vh] md:min-h-[90vh] flex items-center justify-center">
         {/* Background Video Element */}
         <video
