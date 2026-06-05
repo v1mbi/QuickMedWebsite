@@ -97,13 +97,39 @@ export default function Home() {
 
   // Automatically transition from Phase 1 to Phase 2 content
   useEffect(() => {
-    document.title = "Home | QuickMed Connections";
+    // 1. Dynamic Primary Title Link Generation
+    document.title =
+      "Bespoke Diaspora Risk Solutions & Insurance | QuickMed Connections";
+
+    // 2. Dynamic Meta Description Tag (Curated precisely to prevent trailing cutoff dots)
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+      metaDesc = document.createElement("meta");
+      metaDesc.setAttribute("name", "description");
+      document.head.appendChild(metaDesc);
+    }
+    metaDesc.setAttribute(
+      "content",
+      "QuickMed Connections designs affordable diaspora insurance solutions. Secure cross-border health insurance, funeral insurance and asset insurance coverage for your loved ones.",
+    );
+
+    // 3. Dynamic Meta Keywords Injection
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (!metaKeywords) {
+      metaKeywords = document.createElement("meta");
+      metaKeywords.setAttribute("name", "keywords");
+      document.head.appendChild(metaKeywords);
+    }
+    metaKeywords.setAttribute(
+      "content",
+      "diaspora, zimbabwe, zimbabwe insurance, health insurance, funeral insurance, asset insurance, diaspora, zimbabwe, south africa, sa, cross border medical aid, zimbabwe diaspora coverage, global health plans, medical risk solutions",
+    );
+
     getSanityData("blog").then(setBlogs);
     const timer = setTimeout(() => {
       setCurrentPhase(2);
-    }, 4500); // Adjust this value to control how long Phase 1 stays on screen
+    }, 4500);
     return () => clearTimeout(timer);
-    
   }, []);
 
   // Slide paths for Phase transitions
@@ -122,7 +148,7 @@ export default function Home() {
   };
 
   return (
-    <div className="font-montserrat bg-slate-50 w-full text-slate-800  antialiased scroll-smooth min-h-screen">
+    <main className="font-montserrat bg-slate-50 w-full text-slate-800  antialiased scroll-smooth min-h-screen">
       {/* Dynamic Hero Section */}
       <section className="relative w-full overflow-hidden bg-white text-white min-h-[85vh] md:min-h-[90vh] flex items-center justify-center">
         {/* Background Video Element */}
@@ -853,6 +879,6 @@ export default function Home() {
         </h2>
       </div>
       <Contact />
-    </div>
+    </main>
   );
 }
