@@ -26,6 +26,8 @@ import TextBlogCard from "../components/textBlogCard";
 import BlogCard from "../components/blogCard";
 import { Contact } from "../components/contact";
 import { Helmet } from "react-helmet-async";
+import ImageCard from "../components/imageCard";
+
 
 export default function Home() {
   const MotionLink = motion.create(Link);
@@ -695,7 +697,7 @@ export default function Home() {
         </motion.div>
 
         {/* Staggered Blog Cards */}
-        {blogs.map((blog, index) => (
+        {blogs.filter((blog) => blog.message).map((blog, index) => (
           <motion.div
             key={index}
             variants={{
@@ -709,14 +711,15 @@ export default function Home() {
             className="h-fit sm:h-[275px] w-11/12 mb-20 flex justify-center items-center mx-auto"
           >
             {blog.blogImage ===
-            "https://via.placeholder.com/600x400?text=No+Image+Available" ? (
+              "https://via.placeholder.com/600x400?text=No+Image+Available" ||
+            !blog.blogImage ? (
               <TextBlogCard
                 title={blog.title}
                 message={blog.message}
                 author={blog.author}
                 date={formatDate(blog.date)}
               />
-            ) : (
+            ) : blog.message ? (
               <BlogCard
                 title={blog.title}
                 message={blog.message}
@@ -724,6 +727,8 @@ export default function Home() {
                 date={formatDate(blog.date)}
                 imageSrc={blog.blogImage}
               />
+            ) : (
+              <></>
             )}
           </motion.div>
         ))}

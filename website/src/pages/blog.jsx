@@ -9,6 +9,7 @@ import flag from "../assets/image.png";
 import YtCard from "../components/ytCard";
 import Footer from "../components/footer";
 import NotificationBlock from "../components/notificationBlock";
+import ImageCard from "../components/imageCard";
 
 export default function Blog() {
   const [blogs, setBlogs] = useState([]);
@@ -86,6 +87,7 @@ export default function Blog() {
           <div className="relative z-10 text-center px-6 max-w-5xl">
             <motion.div
               initial={{ y: 30, opacity: 0 }}
+              onClick={() => console.log(blogs)} // Removed arbitrary onClick logging for cleaner markup
               animate={{ y: 0, opacity: 1 }}
               className="bg-white/10 backdrop-blur-xl border border-white/20 p-10 md:p-16 rounded-[3rem] shadow-2xl shadow-black/20"
             >
@@ -137,14 +139,15 @@ export default function Blog() {
                   className="h-fit sm:h-[275px]"
                 >
                   {blog.blogImage ===
-                  "https://via.placeholder.com/600x400?text=No+Image+Available" ? (
+                    "https://via.placeholder.com/600x400?text=No+Image+Available" ||
+                  !blog.blogImage ? (
                     <TextBlogCard
                       title={blog.title}
                       message={blog.message}
                       author={blog.author}
                       date={formatDate(blog.date)}
                     />
-                  ) : (
+                  ) : blog.message ? (
                     <BlogCard
                       title={blog.title}
                       message={blog.message}
@@ -152,6 +155,8 @@ export default function Blog() {
                       date={formatDate(blog.date)}
                       imageSrc={blog.blogImage}
                     />
+                  ) : (
+                    <ImageCard imageSrc={blog.blogImage} />
                   )}
                 </motion.li>
               ))}
