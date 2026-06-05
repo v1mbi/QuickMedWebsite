@@ -127,6 +127,8 @@ const AssetInsurance = () => {
         <section aria-label="Contact QuickMed Connections">
           <Contact />
         </section>
+        
+
       </main>
     </>
   );

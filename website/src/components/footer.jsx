@@ -109,6 +109,28 @@ const Footer = () => {
             <Mail size={14} />
             Email Us
           </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=61575038401512" // Put your link here
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-bold bg-blue-200 rounded-lg mt-2 py-3 px-2 text-blue-700 hover:font-extrabold hover:bg-blue-100 duration-300 flex items-center justify-center gap-2"
+          >
+            {/* Standard Facebook SVG tailored to match Lucide style */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg>
+            Connect on Facebook
+          </a>
         </div>
       </div>
 
