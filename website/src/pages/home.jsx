@@ -748,7 +748,9 @@ export default function Home() {
               QuickMed Connections is a UK-based representative underwritten by
               <span className="font-semibold text-slate-900">
                 {" "}
-                Generation Health Medical Aid Fund
+                Multiple agent of various zimbabwean insurance companies to
+                promote and the usage of Medical aid and Funeral insurance
+                amongst zimbabweans both in zimbabwe and in the diaspora
               </span>
               . We empower the Zimbabwean diaspora to easily secure, manage, and
               fund comprehensive medical aid plans—ranging from basic essential

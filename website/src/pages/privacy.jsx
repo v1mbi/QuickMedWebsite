@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import {
   Shield,
   FileText,
@@ -12,23 +12,67 @@ import {
 } from "lucide-react";
 
 const PrivacyPolicy = () => {
-    useEffect(() => {
-        document.title = "Privacy Policy - QuickMed Connections";
-      }, []);
+  useEffect(() => {
+    // 1. Dynamic Title Tag
+    document.title = "Privacy Policy & Data Protection | QuickMed Connections";
+
+    // 2. Dynamic Meta Description Injection
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+      metaDesc = document.createElement("meta");
+      metaDesc.setAttribute("name", "description");
+      document.head.appendChild(metaDesc);
+    }
+    metaDesc.setAttribute(
+      "content",
+      "Read the QuickMed Connections Privacy Policy. Learn how we securely handle, process, and protect your personal metrics and medical plan data under international compliance laws.",
+    );
+
+    // 3. Dynamic Meta Keywords Injection
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (!metaKeywords) {
+      metaKeywords = document.createElement("meta");
+      metaKeywords.setAttribute("name", "keywords");
+      document.head.appendChild(metaKeywords);
+    }
+    metaKeywords.setAttribute(
+      "content",
+      "QuickMed privacy, medical data protection, health policy compliance, cross-border privacy policy, access data rights",
+    );
+
+    // 4. Clean indexing declaration for search engine crawlers
+    let metaRobots = document.querySelector('meta[name="robots"]');
+    if (!metaRobots) {
+      metaRobots = document.createElement("meta");
+      metaRobots.setAttribute("name", "robots");
+      document.head.appendChild(metaRobots);
+    }
+    metaRobots.setAttribute("content", "index, follow");
+  }, []);
+
   return (
-    <div className="w-full bg-slate-50/50 min-h-screen py-16 px-4 sm:px-6 lg:px-8 font-sans antialiased text-slate-600">
-      <div className="max-w-3xl mx-auto bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden">
+    // Wrapped main layout block in a semantic <main> tag
+    <main className="w-full bg-slate-50/50 min-h-screen py-16 px-4 sm:px-6 lg:px-8 font-sans antialiased text-slate-600">
+      {/* Wrapped actual content in an <article> container to signify a standalone, formal document */}
+      <article className="max-w-3xl mx-auto bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden">
         {/* Elegant Minimalist Header */}
-        <div className="relative p-8 sm:p-12 border-b border-slate-100 bg-gradient-to-b from-slate-50/50 to-white">
-          <div className="absolute top-8 right-8 text-rose-600/5 pointer-events-none">
+        <header className="relative p-8 sm:p-12 border-b border-slate-100 bg-gradient-to-b from-slate-50/50 to-white">
+          <div
+            className="absolute top-8 right-8 text-rose-600/5 pointer-events-none"
+            aria-hidden="true"
+          >
             <Shield size={140} strokeWidth={1} />
           </div>
 
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-xs font-semibold tracking-wide uppercase mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
+            <span
+              className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"
+              aria-hidden="true"
+            ></span>
             Regulatory Compliance
           </div>
 
+          {/* Absolute peak semantic page title */}
           <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight leading-none mb-4">
             Privacy Policy
           </h1>
@@ -40,15 +84,22 @@ const PrivacyPolicy = () => {
             and ensuring the security of your personal information. This policy
             explains how we collect, use, and safeguard your data.
           </p>
-        </div>
+        </header>
 
         {/* Content Body */}
         <div className="p-8 sm:p-12 space-y-12">
           {/* Section 1: Information We Collect */}
-          <section className="space-y-4">
+          <section aria-labelledby="section-collect" className="space-y-4">
             <div className="flex items-center gap-3">
-              <FileText size={18} className="text-rose-600" />
-              <h2 className="text-lg font-bold text-slate-900 tracking-tight">
+              <FileText
+                size={18}
+                className="text-rose-600"
+                aria-hidden="true"
+              />
+              <h2
+                id="section-collect"
+                className="text-lg font-bold text-slate-900 tracking-tight"
+              >
                 1. Information We Collect
               </h2>
             </div>
@@ -71,6 +122,7 @@ const PrivacyPolicy = () => {
                   <ArrowRight
                     size={14}
                     className="text-blue-500 flex-shrink-0"
+                    aria-hidden="true"
                   />
                   <span className="text-slate-700 text-sm font-medium">
                     {item}
@@ -81,10 +133,17 @@ const PrivacyPolicy = () => {
           </section>
 
           {/* Section 2: How We Use Your Information */}
-          <section className="space-y-4">
+          <section aria-labelledby="section-usage" className="space-y-4">
             <div className="flex items-center gap-3">
-              <UserCheck size={18} className="text-rose-600" />
-              <h2 className="text-lg font-bold text-slate-900 tracking-tight">
+              <UserCheck
+                size={18}
+                className="text-rose-600"
+                aria-hidden="true"
+              />
+              <h2
+                id="section-usage"
+                className="text-lg font-bold text-slate-900 tracking-tight"
+              >
                 2. Operational Data Usage
               </h2>
             </div>
@@ -104,7 +163,10 @@ const PrivacyPolicy = () => {
                   key={idx}
                   className="flex items-start gap-3 text-slate-600 text-sm"
                 >
-                  <span className="flex-shrink-0 w-5 h-5 rounded-md bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center font-bold text-xs mt-0.5">
+                  <span
+                    className="flex-shrink-0 w-5 h-5 rounded-md bg-blue-50 border border-blue-100 text-blue-600 flex items-center justify-center font-bold text-xs mt-0.5"
+                    aria-hidden="true"
+                  >
                     ✓
                   </span>
                   <span className="leading-relaxed">{item}</span>
@@ -114,13 +176,22 @@ const PrivacyPolicy = () => {
           </section>
 
           {/* Section 3: How We Protect Your Information */}
-          <section className="p-6 rounded-2xl bg-rose-50/40 border border-rose-100/70 relative overflow-hidden">
-            <div className="absolute -right-4 -bottom-4 text-rose-200/20">
+          <section
+            aria-labelledby="section-security"
+            className="p-6 rounded-2xl bg-rose-50/40 border border-rose-100/70 relative overflow-hidden"
+          >
+            <div
+              className="absolute -right-4 -bottom-4 text-rose-200/20"
+              aria-hidden="true"
+            >
               <Lock size={80} />
             </div>
             <div className="flex items-center gap-3 mb-3">
-              <Lock size={18} className="text-rose-700" />
-              <h2 className="text-base font-bold text-slate-900 tracking-tight">
+              <Lock size={18} className="text-rose-700" aria-hidden="true" />
+              <h2
+                id="section-security"
+                className="text-base font-bold text-slate-900 tracking-tight"
+              >
                 Data Protection & Infrastructure Security
               </h2>
             </div>
@@ -133,12 +204,16 @@ const PrivacyPolicy = () => {
           </section>
 
           {/* Section 4: Disclosure of Your Information */}
-          <section className="space-y-4">
+          <section aria-labelledby="section-sharing" className="space-y-4">
             <div className="flex items-center gap-3">
-              <button className="text-rose-600">
+              {/* Swapped unclickable button tag for a clean, accessible layout div block */}
+              <div className="text-rose-600" aria-hidden="true">
                 <Users size={18} />
-              </button>
-              <h2 className="text-lg font-bold text-slate-900 tracking-tight">
+              </div>
+              <h2
+                id="section-sharing"
+                className="text-lg font-bold text-slate-900 tracking-tight"
+              >
                 3. Authorized Data Sharing
               </h2>
             </div>
@@ -175,10 +250,13 @@ const PrivacyPolicy = () => {
           </section>
 
           {/* Section 5: Your Rights */}
-          <section className="space-y-4">
+          <section aria-labelledby="section-rights" className="space-y-4">
             <div className="flex items-center gap-3">
-              <Shield size={18} className="text-rose-600" />
-              <h2 className="text-lg font-bold text-slate-900 tracking-tight">
+              <Shield size={18} className="text-rose-600" aria-hidden="true" />
+              <h2
+                id="section-rights"
+                className="text-lg font-bold text-slate-900 tracking-tight"
+              >
                 4. User Rights & Data Autonomy
               </h2>
             </div>
@@ -209,9 +287,10 @@ const PrivacyPolicy = () => {
                   key={idx}
                   className="p-4 rounded-xl border border-slate-100 bg-slate-50/30 hover:bg-white hover:shadow-sm hover:border-slate-200 transition-all duration-200"
                 >
-                  <h4 className="font-bold text-slate-900 text-sm mb-1">
+                  {/* Changed from generic h4 block to h3 element for sequential step hierarchy rules */}
+                  <h3 className="font-bold text-slate-900 text-sm mb-1">
                     {right.title}
-                  </h4>
+                  </h3>
                   <p className="text-slate-500 text-xs leading-relaxed">
                     {right.desc}
                   </p>
@@ -221,11 +300,17 @@ const PrivacyPolicy = () => {
           </section>
 
           {/* Premium Minimalist Contact Footer */}
-          <section className="pt-8 border-t border-slate-100">
-            <div className="bg-slate-950 text-slate-400 rounded-2xl p-6 sm:p-8 relative overflow-hidden">
-              <h3 className="text-base font-bold text-white mb-2 flex items-center gap-2">
+          <section
+            aria-labelledby="section-contact"
+            className="pt-8 border-t border-slate-100"
+          >
+            <div className="bg-black/90 text-slate-400 rounded-2xl p-6 sm:p-8 relative overflow-hidden">
+              <h2
+                id="section-contact"
+                className="text-base font-bold text-white mb-2 flex items-center gap-2"
+              >
                 Corporate Registry & Support
-              </h3>
+              </h2>
               <p className="text-xs text-slate-400 mb-6 max-w-xl">
                 For formal inquiries regarding legal infrastructure, algorithmic
                 processing, or to execute your user data rights, reach our
@@ -239,6 +324,7 @@ const PrivacyPolicy = () => {
                     <MapPin
                       className="text-rose-500 mt-0.5 flex-shrink-0"
                       size={14}
+                      aria-hidden="true"
                     />
                     <div>
                       <strong className="text-slate-200 block mb-0.5">
@@ -253,6 +339,7 @@ const PrivacyPolicy = () => {
                     <MapPin
                       className="text-rose-500 mt-0.5 flex-shrink-0"
                       size={14}
+                      aria-hidden="true"
                     />
                     <div>
                       <strong className="text-slate-200 block mb-0.5">
@@ -268,7 +355,11 @@ const PrivacyPolicy = () => {
                 {/* Comms Network */}
                 <div className="space-y-3 md:pl-4 md:border-l border-slate-800/80">
                   <div className="flex items-center gap-2.5">
-                    <Phone className="text-blue-400 flex-shrink-0" size={14} />
+                    <Phone
+                      className="text-blue-400 flex-shrink-0"
+                      size={14}
+                      aria-hidden="true"
+                    />
                     <span className="text-slate-300 font-light">
                       UK:{" "}
                       <a
@@ -280,7 +371,11 @@ const PrivacyPolicy = () => {
                     </span>
                   </div>
                   <div className="flex items-center gap-2.5">
-                    <Phone className="text-blue-400 flex-shrink-0" size={14} />
+                    <Phone
+                      className="text-blue-400 flex-shrink-0"
+                      size={14}
+                      aria-hidden="true"
+                    />
                     <span className="text-slate-300 font-light">
                       SA:{" "}
                       <a
@@ -292,7 +387,11 @@ const PrivacyPolicy = () => {
                     </span>
                   </div>
                   <div className="flex items-center gap-2.5 pt-2 border-t border-slate-900">
-                    <Mail className="text-blue-400 flex-shrink-0" size={14} />
+                    <Mail
+                      className="text-blue-400 flex-shrink-0"
+                      size={14}
+                      aria-hidden="true"
+                    />
                     <a
                       href="mailto:info@quickmedconnections.com"
                       className="text-rose-400 font-medium hover:text-rose-300 transition-colors"
@@ -315,8 +414,8 @@ const PrivacyPolicy = () => {
             </div>
           </section>
         </div>
-      </div>
-    </div>
+      </article>
+    </main>
   );
 };
 

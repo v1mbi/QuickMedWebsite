@@ -1,4 +1,5 @@
-import React,{useEffect,useState} from "react";
+import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async"; // Clean meta injection
 import MultiStepForm from "../../components/multiform";
 import HealthInsuranceSteps from "../../components/steps";
 import HealthTitle from "../../components/healthTitle";
@@ -14,73 +15,124 @@ import {
   Briefcase,
   ShieldCheck,
 } from "lucide-react";
-import {getSanityData} from "../../functions/outsource_media";
+import { getSanityData } from "../../functions/outsource_media";
 
 export default function HealthInsurance() {
-    const [limits, setLimits] = useState([]);
-  
-    useEffect(() => {
-      const fetchLimits = async () => {
+  const [limits, setLimits] = useState([]);
+
+  useEffect(() => {
+    const fetchLimits = async () => {
       try {
-      setLimits(((await getSanityData('plans')).filter(plan => plan.variation === 'Health').map(item => {return item.allowance})).sort((a, b) => a - b).filter((value, index, self) => self.indexOf(value) === index));
+        setLimits(
+          (await getSanityData("plans"))
+            .filter((plan) => plan.variation === "Health")
+            .map((item) => item.allowance)
+            .sort((a, b) => a - b)
+            .filter((value, index, self) => self.indexOf(value) === index),
+        );
       } catch (error) {
         console.error("Error fetching limits:", error);
-      }};
-      fetchLimits();
-        document.title = "Health Insurance - QuickMed Connections";
-    }, []);
-  return (
-    <div className="w-full min-h-screen flex flex-col items-center justify-center ">
-      <HealthTitle />
-      <div className="flex flex-col space-y-20 lg:space-y-0 lg:flex-row items-center justify-center w-full py-2">
-        <div className="w-11/12 lg:w-3/5">
-          <MultiStepForm limits={limits} />
-        </div>
-        <div className="lg:w-2/5">
-          <HealthInsuranceSteps />{" "}
-        </div>
-      </div>
-      <WhyChooseUsHealth
-        points={[
-          {
-            title: "Access to Top Doctors",
-            desc: "Use the best private hospitals and see specialist doctors when you need them.",
-            icon: <Stethoscope className="w-6 h-6 text-red-600" />,
-          },
-          {
-            title: "Cheap Options",
-            desc: "Get basic cover for as little as $0.75 a month, perfect for tight budgets.",
-            icon: <Wallet className="w-6 h-6 text-red-600" />,
-          },
-          {
-            title: "Currency Choice",
-            desc: "Pay for your plan in USD or local currency (ZWG) depending on what works for you.",
-            icon: <Coins className="w-6 h-6 text-red-600" />,
-          },
-          {
-            title: "Money Back Rewards",
-            desc: "Get cash back for low claims or a daily rate while in the hospital to help with costs.",
-            icon: <ShieldCheck className="w-6 h-6 text-red-600" />,
-          },
-          {
-            title: "Free Extras",
-            desc: "Includes bonus features like funeral cover, wellness programs, or mobile data.",
-            icon: <Gift className="w-6 h-6 text-red-600" />,
-          },
-          {
-            title: "Made for Your Needs",
-            desc: "Specific packages designed for growing families, students, or seniors.",
-            icon: <Users className="w-6 h-6 text-red-600" />,
-          },
-          {
-            title: "Corporate Benefits",
-            desc: "Cheaper rates for work groups with easy paperwork handled by your company.",
-            icon: <Briefcase className="w-6 h-6 text-red-600" />,
-          },
-        ]}
-      />
-      <ProviderResources />
+      }
+    };
+    fetchLimits();
+    // Removed document.title from here as it's now handled declaratively by Helmet
+  }, []);
 
-    </div>
+  return (
+    <>
+      {/* 1. Dynamic SEO & Social Share Header Injection */}
+      <Helmet>
+        <title>Affordable Health Insurance Plans | QuickMed Connections</title>
+        <meta
+          name="description"
+          content="Compare and select custom medical aid packages from QuickMed Connections. Access top private doctors, flexible USD or ZWG payment options, and low-cost health cover starting from $0.75/month."
+        />
+        <meta
+          name="keywords"
+          content="health insurance, medical aid, quickmed connections, cheap health cover, ZWG medical insurance, private doctors"
+        />
+        <link rel="canonical" href="https://yourwebsite.com/health-insurance" />
+
+        {/* Open Graph Tags */}
+        <meta
+          property="og:title"
+          content="Affordable Health Insurance Plans | QuickMed Connections"
+        />
+        <meta
+          property="og:description"
+          content="Access top private doctors and flexible premium payment paths with QuickMed Connections medical cover."
+        />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
+      {/* 2. Semantic Wrapper (<main>) */}
+      <main className="w-full min-h-screen flex flex-col items-center justify-center">
+        {/* H1 context is generated by your <HealthTitle /> block inside here */}
+        <HealthTitle />
+
+        {/* 3. Segmented Layout Sections */}
+        <section
+          className="flex flex-col space-y-20 lg:space-y-0 lg:flex-row items-center justify-center w-full py-2"
+          aria-label="Health Plan Selector Form"
+        >
+          <div className="w-11/12 lg:w-3/5">
+            <MultiStepForm limits={limits} />
+          </div>
+          <div className="lg:w-2/5">
+            <HealthInsuranceSteps />
+          </div>
+        </section>
+
+        {/* 4. Feature Highlights Section with Optimized SEO Keywords */}
+        <section
+          className="w-full"
+          aria-label="Why Choose Our Medical Aid Cover"
+        >
+          <WhyChooseUsHealth
+            points={[
+              {
+                title: "Access to Top Private Doctors", // Keyword enriched
+                desc: "Use the best private hospitals and see specialist doctors when you need them.",
+                icon: <Stethoscope className="w-6 h-6 text-red-600" />,
+              },
+              {
+                title: "Affordable Health Cover Options", // Upgraded from "Cheap Options"
+                desc: "Get basic cover for as little as $0.75 a month, perfect for tight budgets.",
+                icon: <Wallet className="w-6 h-6 text-red-600" />,
+              },
+              {
+                title: "Flexible Currency Choices (USD & ZWG)", // Explicit keyword targeting
+                desc: "Pay for your plan in USD or local currency (ZWG) depending on what works for you.",
+                icon: <Coins className="w-6 h-6 text-red-600" />,
+              },
+              {
+                title: "Money Back Claims Rewards",
+                desc: "Get cash back for low claims or a daily rate while in the hospital to help with costs.",
+                icon: <ShieldCheck className="w-6 h-6 text-red-600" />,
+              },
+              {
+                title: "Free Medical Plan Extras",
+                desc: "Includes bonus features like funeral cover, wellness programs, or mobile data.",
+                icon: <Gift className="w-6 h-6 text-red-600" />,
+              },
+              {
+                title: "Tailored Custom Packages",
+                desc: "Specific packages designed for growing families, students, or seniors.",
+                icon: <Users className="w-6 h-6 text-red-600" />,
+              },
+              {
+                title: "Corporate Health Benefits",
+                desc: "Cheaper rates for work groups with easy paperwork handled by your company.",
+                icon: <Briefcase className="w-6 h-6 text-red-600" />,
+              },
+            ]}
+          />
+        </section>
+
+        <section className="w-full" aria-label="Medical Provider Resources">
+          <ProviderResources />
+        </section>
+      </main>
+    </>
   );
 }
