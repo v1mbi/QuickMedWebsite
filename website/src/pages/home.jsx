@@ -105,7 +105,7 @@ export default function Home() {
     getSanityData("blog").then(setBlogs);
     const timer = setTimeout(() => {
       setCurrentPhase(2);
-    }, 4500);
+    }, 6000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -761,7 +761,7 @@ export default function Home() {
 
         <div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-8 md:flex-row md:items-start md:gap-12 lg:gap-16">
           {/* Left Side: Dynamic Display Heading */}
-          <div className="flex flex-row gap-2 font-jakarta text-5xl font-black tracking-tight text-indigo-900 sm:text-6xl md:flex-col md:text-7xl lg:text-8xl">
+          <div className="flex flex-row gap-2 font-jakarta text-5xl font-black tracking-tight text-indigo-900 sm:text-6xl  md:flex-col md:text-7xl lg:text-8xl">
             <span className="opacity-40">About</span>
             <span>Us.</span>
           </div>
