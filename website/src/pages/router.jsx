@@ -10,11 +10,12 @@ import AssetInsurance from './insurance/assetInsurance';
 import Home from "./home";
 import Footer from '../components/footer';
 import PrivacyPolicy from './privacy';
+import NotFoundPage from './404page';
 
 
 export default function Router() {
   return (
-    <div className="flex flex-col items-end w-screen space-y-20 overflow-y-hidden"><Navbar /><Routes >
+    <div className="flex flex-col overflow-x-hidden items-end w-screen space-y-20 overflow-y-hidden"><Navbar /><Routes >
       <Route path="/" element={<Home/>} />
       <Route path="/privacy" element={<PrivacyPolicy />} />
       <Route path="/home" element={<Home/>} />
@@ -24,6 +25,7 @@ export default function Router() {
       <Route path="/insurance/funeral" element={<FuneralInsurance />} />
       <Route path="/insurance/asset" element={<AssetInsurance />} />
       <Route path="/contact" element={<ContactPage />} />
+      <Route path="*" element={<NotFoundPage/>} />
     </Routes><Footer /></div>
     
   );
