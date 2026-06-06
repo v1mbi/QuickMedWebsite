@@ -15,7 +15,7 @@ import NotFoundPage from './404page';
 
 export default function Router() {
   return (
-    <div className="flex flex-col overflow-x-hidden items-end w-screen space-y-20 overflow-y-hidden"><Navbar /><Routes >
+    <div className="flex flex-col overflow-x-hidden items-end w-full space-y-20 overflow-y-hidden"><Navbar /><Routes >
       <Route path="/" element={<Home/>} />
       <Route path="/privacy" element={<PrivacyPolicy />} />
       <Route path="/home" element={<Home/>} />
