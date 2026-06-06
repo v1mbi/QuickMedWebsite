@@ -299,7 +299,7 @@ export default function Home() {
                     >
                       <div className="grid grid-cols-3 gap-2 sm:gap-4">
                         {/* Category Sub Card item: Health */}
-                        <motion.div
+                        <Link to="/insurance/health"><motion.div
                           whileHover={{ scale: 1.04, y: -2 }}
                           className="bg-red-50 border border-red-100 rounded-2xl p-2 sm:p-4 text-center flex flex-col items-center justify-center cursor-pointer group shadow-sm hover:bg-red-50/50 hover:border-red-100 transition-all"
                         >
@@ -309,10 +309,11 @@ export default function Home() {
                           <span className="font-bold text-[0.525rem] sm:text-sm text-slate-700 group-hover:text-red-950">
                             Health
                           </span>
-                        </motion.div>
+                        </motion.div></Link>
+                        
 
                         {/* Category Sub Card item: Funeral */}
-                        <motion.div
+                        <Link to="/insurance/funeral"><motion.div
                           whileHover={{ scale: 1.04, y: -2 }}
                           className="bg-red-50 border border-red-100 rounded-2xl p-2 sm:p-4 text-center flex flex-col items-center justify-center cursor-pointer group shadow-sm hover:bg-red-50/50 hover:border-red-100 transition-all"
                         >
@@ -322,10 +323,11 @@ export default function Home() {
                           <span className="font-bold text-[0.525rem] sm:text-sm text-slate-700 group-hover:text-red-950">
                             Funeral
                           </span>
-                        </motion.div>
+                        </motion.div></Link>
+                        
 
                         {/* Category Sub Card item: Assets */}
-                        <motion.div
+                        <Link to="/insurance/asset"><motion.div
                           whileHover={{ scale: 1.04, y: -2 }}
                           className="bg-red-50 border border-red-100 rounded-2xl p-2 sm:p-4 text-center flex flex-col items-center justify-center cursor-pointer group shadow-sm hover:bg-red-50/50 hover:border-red-100 transition-all"
                         >
@@ -335,7 +337,8 @@ export default function Home() {
                           <span className="font-bold text-[0.525rem] sm:text-sm text-slate-700 group-hover:text-red-950">
                             Assets
                           </span>
-                        </motion.div>
+                        </motion.div></Link>
+                        
                       </div>
 
                       {/* Bottom Accent Subtitle Footer text */}
