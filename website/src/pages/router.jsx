@@ -25,7 +25,7 @@ export default function Router() {
       <Route path="/insurance/funeral" element={<FuneralInsurance />} />
       <Route path="/insurance/asset" element={<AssetInsurance />} />
       <Route path="/contact" element={<ContactPage />} />
-      <Route path="*" element={<NotFoundPage/>} />
+      <Route path="*" element={<Home/>} />
     </Routes><Footer /></div>
     
   );
