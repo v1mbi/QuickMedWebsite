@@ -17,7 +17,7 @@ const ImageCard = ({ imageSrc, altText = "Image preview" }) => {
       {/* --- MINI IMAGE VIEW --- */}
       <div
         onClick={() => setIsOpen(true)}
-        className="group h-full max-w-2xl bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer p-4"
+        className="group h-full max-w-2xl bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer "
       >
         <div className="overflow-hidden h-full w-full rounded-xl aspect-square">
           <img
