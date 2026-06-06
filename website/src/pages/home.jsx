@@ -745,7 +745,7 @@ export default function Home() {
             hidden: { opacity: 1, y: 20 },
             visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
           }}
-          className="col-span-2 w-11/12 sm:w-fit sm:mx-auto bg-rose-600 text-white font-bold  py-5 sm: px-10 rounded-2xl shadow-md hover:bg-rose-700 transition-colors flex items-center  gap-2 text-md sm:text-xl md:text-3xl  text-center"
+          className="col-span-2 w-11/12 mt-10 sm:w-fit sm:mx-auto bg-rose-600 text-white font-bold  py-5 sm: px-10 rounded-2xl shadow-md hover:bg-rose-700 transition-colors flex items-center  gap-2 text-md sm:text-xl md:text-3xl  text-center"
         >
           <span className="w-full sm:w-fit text-center">
             Explore More Articles
