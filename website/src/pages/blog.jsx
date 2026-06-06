@@ -81,7 +81,7 @@ export default function Blog() {
               alt="QuickMed Connections Healthcare Insights and Corporate Resource Base" // Descriptive keyword alternative text
               loading="eager" // Hero assets should load instantly for optimized LCP metrics
             />
-            <div className="absolute  inset-0 bg-slate-900/50 backdrop-blur-[2px]" />
+            <div className="absolute  inset-0 bg-slate-900/50 backdrop-blur-[7px]" />
           </motion.div>
 
           <div className="relative z-10 text-center px-6 max-w-5xl">
