@@ -66,7 +66,7 @@ export default function Blog() {
 
         {/* --- HERO SECTION --- */}
         <section
-          className="relative w-full h-[60vh] flex items-center justify-center overflow-hidden"
+          className="relative w-full  flex items-center justify-center overflow-hidden"
           aria-label="Blog Introduction"
         >
           <motion.div
@@ -81,7 +81,7 @@ export default function Blog() {
               alt="QuickMed Connections Healthcare Insights and Corporate Resource Base" // Descriptive keyword alternative text
               loading="eager" // Hero assets should load instantly for optimized LCP metrics
             />
-            <div className="absolute inset-0 bg-slate-900/50 backdrop-blur-[2px]" />
+            <div className="absolute  inset-0 bg-slate-900/50 backdrop-blur-[2px]" />
           </motion.div>
 
           <div className="relative z-10 text-center px-6 max-w-5xl">
@@ -89,7 +89,7 @@ export default function Blog() {
               initial={{ y: 30, opacity: 0 }}
               onClick={() => console.log(blogs)} // Removed arbitrary onClick logging for cleaner markup
               animate={{ y: 0, opacity: 1 }}
-              className="bg-white/10 backdrop-blur-xl border border-white/20 p-10 md:p-16 rounded-[3rem] shadow-2xl shadow-black/20"
+              className="bg-white/10 backdrop-blur-xl  border border-white/20 my-20 p-10 md:p-16 rounded-[3rem] shadow-2xl shadow-black/20"
             >
               <span className="text-[10px] font-black tracking-[0.4em] text-white uppercase mb-4 block">
                 Knowledge Base
